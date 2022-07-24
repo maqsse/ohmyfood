@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* mobiles */
 @media screen and (min-width: 320px) and (max-width: 767px) {
   body {
@@ -130,6 +131,9 @@
     color: white;
   }
   /* pages restau */
+  i.fa-solid.fa-arrow-left {
+    color: black;
+  }
   .logo-page-one {
     display: flex;
     flex-direction: row;
@@ -141,8 +145,15 @@
     width: 100%;
     height: 100%;
   }
+  hr {
+    height: 1px;
+    background-color: aqua;
+    width: 10%;
+    position: relative;
+    right: 45%;
+  }
   .description-menu {
-    background-color: white;
+    background-color: rgb(236, 246, 246);
     position: relative;
     bottom: 100px;
     border-top-left-radius: 30px;
@@ -153,16 +164,21 @@
     padding-left: 3%;
   }
   .description-menu .fa-regular {
-    margin-left: 10%;
-  }
-  .description-menu .div-title {
-    border: 1px solid red;
+    margin-left: 25%;
   }
   .description-menu .div-description-menu {
-    border: 1px solid black;
+    background-color: white;
+    border: 1px solid transparent;
     margin-bottom: 5%;
     border-radius: 20px;
-    height: 120px;
+    height: 80px;
+    box-shadow: 2px 2px rgb(227, 244, 238);
+  }
+  .description-menu .div-description-menu .deuxieme-para {
+    position: relative;
+    bottom: 10%;
+    font-size: 10px;
+    width: 85%;
   }
   .description-menu .div-description-menu .para-description-menu {
     font-weight: 900;
@@ -170,8 +186,8 @@
   .description-menu .div-description-menu .price {
     font-weight: 900;
     position: relative;
-    left: 80%;
-    bottom: 40px;
+    left: 90%;
+    bottom: 50px;
     width: 10%;
   }
   .divbouton {
@@ -179,4 +195,58 @@
     bottom: 50px;
   }
 }
-/* tablette *//*# sourceMappingURL=style.css.map */
+/* tablette */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #image-pages-restau {
+    width: 100%;
+  }
+  #logo-restaurant {
+    position: relative;
+    left: 25%;
+  }
+  .description-menu h2 {
+    text-align: center;
+  }
+  .description-menu .fa-regular {
+    position: relative;
+    left: 10%;
+  }
+  .div-description-menu .price {
+    width: 10%;
+    position: relative;
+    left: 90%;
+    bottom: 40px;
+  }
+  .boutons-principaux {
+    padding: 10px;
+    border-radius: 20px;
+    color: white;
+    background-color: rgb(177, 122, 205);
+    border: 1px solid transparent;
+    box-shadow: 1px 1px 1px 1px rgb(179, 179, 189);
+    margin-left: 15%;
+    width: 70%;
+  }
+  #foot {
+    background-color: #575757;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    font-size: 10px;
+  }
+  #foot img {
+    width: 40%;
+    filter: opacity(1) drop-shadow(0 0 0 white) invert(100%);
+    margin-bottom: 20px;
+    margin-left: 10px;
+    margin-top: 10px;
+  }
+  #foot span i.fa-solid {
+    margin: 5px;
+  }
+  #foot a {
+    text-decoration: none;
+    color: white;
+  }
+}
+/* écrans larges *//*# sourceMappingURL=style.css.map */
