@@ -130,8 +130,53 @@
     color: white;
   }
   /* pages restau */
-  .logo-pages-restau {
-    margin-left: 10px;
+  .logo-page-one {
+    display: flex;
+    flex-direction: row;
+  }
+  .div-img-pages-restau {
+    height: 300px;
+  }
+  .div-img-pages-restau img {
+    width: 100%;
+    height: 100%;
+  }
+  .description-menu {
+    background-color: white;
+    position: relative;
+    bottom: 100px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+  }
+  .description-menu h2 {
+    padding-top: 5%;
+    padding-left: 3%;
+  }
+  .description-menu .fa-regular {
+    margin-left: 10%;
+  }
+  .description-menu .div-title {
+    border: 1px solid red;
+  }
+  .description-menu .div-description-menu {
+    border: 1px solid black;
+    margin-bottom: 5%;
+    border-radius: 20px;
+    height: 120px;
+  }
+  .description-menu .div-description-menu .para-description-menu {
+    font-weight: 900;
+  }
+  .description-menu .div-description-menu .price {
+    font-weight: 900;
+    position: relative;
+    left: 80%;
+    bottom: 40px;
+    width: 10%;
+  }
+  .divbouton {
+    position: relative;
+    bottom: 50px;
   }
 }
 /* tablette *//*# sourceMappingURL=style.css.map */
