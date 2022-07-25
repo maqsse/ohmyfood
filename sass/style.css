@@ -164,7 +164,7 @@
     padding-left: 3%;
   }
   .description-menu .fa-regular {
-    margin-left: 25%;
+    margin-left: 10%;
   }
   .description-menu .div-description-menu {
     background-color: white;
@@ -176,7 +176,7 @@
   }
   .description-menu .div-description-menu .deuxieme-para {
     position: relative;
-    bottom: 10%;
+    bottom: 20%;
     font-size: 10px;
     width: 85%;
   }
@@ -187,7 +187,7 @@
     font-weight: 900;
     position: relative;
     left: 90%;
-    bottom: 50px;
+    bottom: 55px;
     width: 10%;
   }
   .divbouton {
@@ -203,19 +203,169 @@
   #logo-restaurant {
     position: relative;
     left: 25%;
+    width: 70%;
   }
-  .description-menu h2 {
+  #formulaire #search {
+    width: 100%;
+    text-align: center;
+    font-weight: 900;
+  }
+  #formulaire input::-moz-placeholder {
+    color: black;
+  }
+  #formulaire input:-ms-input-placeholder {
+    color: black;
+  }
+  #formulaire input::placeholder {
+    color: black;
+  }
+  .menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .menu button {
+    border-radius: 20px;
+    margin-bottom: 15px;
+    height: 70px;
+    font-weight: 900;
+    border: 1px solid transparent;
+    box-shadow: #575757;
+  }
+  .menu button .fa-regular {
+    position: relative;
+    right: 15px;
+    border: 1px solid transparent;
+    padding: 5px;
+    border-radius: 20px;
+    background-color: #8a2be2;
+    color: white;
+  }
+  .menu button .fa-list {
+    position: relative;
+    right: 10px;
+    color: grey;
+  }
+  .menu button .fa-store {
+    position: relative;
+    right: 10px;
+    color: #8a2be2;
+  }
+  .menu button .fa.fa-mobile-screen {
+    position: relative;
+    right: 10px;
+    color: grey;
+  }
+}
+.description-menu {
+  background-color: rgb(236, 246, 246);
+  position: relative;
+  bottom: 100px;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+}
+.description-menu h2 {
+  text-align: center;
+}
+.description-menu .fa-regular {
+  position: relative;
+  left: 10%;
+}
+
+.box-image img {
+  width: 100%;
+}
+.box-image button {
+  position: relative;
+  left: 90%;
+  bottom: 60px;
+  border-style: none;
+}
+.box-image a {
+  text-decoration: none;
+  color: black;
+}
+
+.div-description-menu {
+  background-color: white;
+  border: 1px solid transparent;
+  margin-bottom: 5%;
+  border-radius: 20px;
+  height: 80px;
+  box-shadow: 2px 2px rgb(227, 244, 238);
+}
+.div-description-menu .price {
+  width: 10%;
+  position: relative;
+  left: 90%;
+  bottom: 40px;
+}
+
+.boutons-principaux {
+  padding: 10px;
+  border-radius: 20px;
+  color: white;
+  background-color: rgb(177, 122, 205);
+  border: 1px solid transparent;
+  box-shadow: 1px 1px 1px 1px rgb(179, 179, 189);
+  position: relative;
+  left: 35%;
+  width: 30%;
+}
+
+#foot {
+  background-color: #575757;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  font-size: 10px;
+}
+#foot img {
+  width: 40%;
+  filter: opacity(1) drop-shadow(0 0 0 white) invert(100%);
+  margin-bottom: 20px;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+#foot span i.fa-solid {
+  margin: 5px;
+}
+#foot a {
+  text-decoration: none;
+  color: white;
+}
+
+.divbouton {
+  position: relative;
+  bottom: 60px;
+}
+
+/* écrans larges */
+@media screen and (min-width: 1024px) {
+  #logo-restaurant {
     text-align: center;
   }
-  .description-menu .fa-regular {
-    position: relative;
-    left: 10%;
+  #formulaire #search {
+    width: 100%;
+    text-align: center;
+    font-weight: 900;
   }
-  .div-description-menu .price {
-    width: 10%;
-    position: relative;
-    left: 90%;
-    bottom: 40px;
+  #formulaire input::-moz-placeholder {
+    color: black;
+  }
+  #formulaire input:-ms-input-placeholder {
+    color: black;
+  }
+  #formulaire input::placeholder {
+    color: black;
+  }
+  #first-para {
+    font-size: 40px;
+    text-align: center;
+  }
+  .p-dec {
+    text-align: center;
+    font-size: 20px;
   }
   .boutons-principaux {
     padding: 10px;
@@ -224,8 +374,34 @@
     background-color: rgb(177, 122, 205);
     border: 1px solid transparent;
     box-shadow: 1px 1px 1px 1px rgb(179, 179, 189);
-    margin-left: 15%;
-    width: 70%;
+    position: relative;
+    left: 40%;
+    width: 20%;
+  }
+  .menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  h2 {
+    text-align: center;
+  }
+  #bloc-photos-restau {
+    text-align: center;
+  }
+  #bloc-photos-restau a {
+    text-decoration: none;
+    color: black;
+  }
+  #bloc-photos-restau img {
+    width: 50%;
+    height: 400px;
+  }
+  #bloc-photos-restau button {
+    position: relative;
+    left: 20%;
+    bottom: 60px;
+    border-style: none;
   }
   #foot {
     background-color: #575757;
@@ -248,5 +424,25 @@
     text-decoration: none;
     color: white;
   }
-}
-/* écrans larges *//*# sourceMappingURL=style.css.map */
+  /* pages restau */
+  .div-img-pages-restau {
+    text-align: center;
+  }
+  .div-img-pages-restau img {
+    width: 70%;
+  }
+  .div-description-menu {
+    background-color: white;
+    border: 1px solid transparent;
+    margin-bottom: 5%;
+    border-radius: 20px;
+    height: 80px;
+    box-shadow: 2px 2px rgb(227, 244, 238);
+  }
+  .div-description-menu .price {
+    width: 10%;
+    position: relative;
+    left: 90%;
+    bottom: 40px;
+  }
+}/*# sourceMappingURL=style.css.map */
