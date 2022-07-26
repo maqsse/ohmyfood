@@ -1,25 +1,35 @@
  $nuance: 900;
+
+
  /* mobiles */
+
 @media screen and (min-width: 320px) and (max-width: 767px) {
  body{
-  
-
-    font-family: 'roboto', sans-serif; 
+      font-family: 'roboto', sans-serif; 
       }
 
        #logo-restaurant img{
         width: 50%;
         margin-left: 25%;
-        
+        font-family: 'Shrikhand', sans serif;
       }
       
       #presentation{
         display: none;
       }
+
+      .explore{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 20%;
+      }
       
      #first-para{
       font-size: 25px;
       text-align: center;
+      font-weight: $nuance;
+      width: 80%;
+      margin-left: 10%;
      }
 
 
@@ -30,15 +40,26 @@
         font-family: FontAwesome, "Roboto", sans-serif;
         border: transparent;
         background-color: #e4d5f7;
-        height: 60px;
+        height: 40px;
       
       &::placeholder{
         color: black;
       }
+
     }
+.new{
+position: absolute;
+color: green;
+background-color: rgb(12, 249, 12);
+left: 70%;
+top: 5%;
+}
+
       .p-dec{
         font-size: 15px;
         margin-left: 25px;
+        position: relative;
+        bottom: 20px;
       }
       .boutons-principaux{
         padding: 10px;
@@ -47,12 +68,17 @@
         background-color: rgb(177, 122, 205);
         border: 1px solid transparent;
         box-shadow: 1px 1px 1px 1px rgb(179, 179, 189);
-        margin-left: 15%;
         width: 70%;
+        margin-left: 15%;
+        position: relative;
+        bottom: 20px;
       }
+
     .menu{
       display: flex;
       flex-direction: column;
+      margin-bottom: 20%;
+      
 
       & button{
         border-radius: 20px;
@@ -61,19 +87,28 @@
         font-weight: $nuance;
         border: 1px solid transparent;
         box-shadow: #575757;
+        margin-left: 2%;
 
         & .fa-regular{
           position: relative;
           right: 40px;
           border: 1px solid transparent;
-          padding: 5px;
+          padding: 4px;
           border-radius: 20px;
           background-color: #8a2be2;
           color: white;
+
+          & i.fa-regular.fa-2{
+            right: 50px;
+          }
         }
+& i.fa-regular.fa-2{
+            right: 50px;
+          }
+
         & .fa-list{
           position: relative;
-          right: 20px;
+          right: 30px;
           color: grey;
         }
          .fa-store{
@@ -89,8 +124,14 @@
         }
       }
     }
-#bloc-photos-restau{
 
+
+  
+
+
+#bloc-photos-restau{
+background-color: rgb(216, 248, 238);
+margin-bottom: 20%;
   & a{
     text-decoration: none;
     color: black;
@@ -100,7 +141,13 @@
     border-radius: 20px;
     margin-bottom: 20px;
     border: 1px solid transparent;
-    box-shadow: rgb(179, 179, 189);
+    box-shadow:2px 2px  rgb(189, 189, 206);
+    position: relative;
+    background-color: white;
+
+    & .first-para-title{
+      font-weight: $nuance;
+    }
   }
   & p{
     height: 10px;
@@ -139,16 +186,23 @@
       }
 
       & span{
-        
+        margin-left: 5px;
 
         & i.fa-solid{
           margin: 5px;
         }
+        
+        
       }
+
+     & #mentions{
+          margin-left: 10px;
+        }
 
       & a{
         text-decoration: none;
         color: white;
+        margin-left: 5px;
       }
     }
 
@@ -230,6 +284,21 @@ box-shadow:2px 2px rgb(227, 244, 238);
 
 /* tablette */ 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
+
+  #presentation{
+    font-size: 10px;
+    font-weight: $nuance;
+  }
+  #first-para{
+    text-align: center;
+    font-size: 25px;
+    
+  }
+  #p-dec{
+    text-align: center;
+    color: rgb(131, 124, 124);
+  }
+
 #image-pages-restau{
   width: 100%;
 }
@@ -254,7 +323,14 @@ box-shadow:2px 2px rgb(227, 244, 238);
   
 }
 
+.explore{
+        display: flex;
+        flex-direction: column;
+      }
 
+      .new{
+        display: none;
+      }
 
 .menu{
 display: flex;
@@ -276,13 +352,13 @@ justify-content: space-between;
           border: 1px solid transparent;
           padding: 5px;
           border-radius: 20px;
-          background-color: #8a2be2;
-          color: white;
+          
         }
         & .fa-list{
           position: relative;
           right: 10px;
           color: grey;
+          color: #8a2be2;
         }
          .fa-store{
           position: relative;
@@ -294,13 +370,20 @@ justify-content: space-between;
           position: relative;
           right: 10px;
           color: grey;
+          color: #8a2be2;
         }
       }
 }
 
+
+
+
+
+.box-image{
+  & img{
+    height: 500px;
+  }
 }
-
-
 
 
 .description-menu{
@@ -320,8 +403,12 @@ background-color: rgb(236, 246, 246);
 }
 
 .box-image{
+width: 90%;
+margin-left: 5%;
+
   & img{
     width: 100%;
+    
   }
   & button{
     position: relative;
@@ -362,9 +449,9 @@ box-shadow:2px 2px rgb(227, 244, 238);
         background-color: rgb(177, 122, 205);
         border: 1px solid transparent;
         box-shadow: 1px 1px 1px 1px rgb(179, 179, 189);
-        position: relative;
-        left: 35%;
-        width: 30%;
+        margin-left: 10%;
+        margin-right: 10%;
+        
 }
 
 
@@ -400,10 +487,11 @@ box-shadow:2px 2px rgb(227, 244, 238);
 .divbouton{
   position: relative;
   bottom: 60px;
+  text-align: center;
 }
 
 
-
+}
 
 
 /* écrans larges */ 
@@ -466,6 +554,9 @@ h2{
   text-align: center;
 }
 
+.new{
+  display: none;
+}
 
     #bloc-photos-restau{
 text-align: center;
@@ -526,6 +617,13 @@ text-align: center;
     width: 70%;
   }
 }
+
+I.fa-regular.fa-heart{
+  position: relative;
+  left: 10%;
+}
+
+
 .div-description-menu{
 background-color: white;
     border: 1px solid transparent;

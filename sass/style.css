@@ -7,13 +7,22 @@
   #logo-restaurant img {
     width: 50%;
     margin-left: 25%;
+    font-family: "Shrikhand", sans serif;
   }
   #presentation {
     display: none;
   }
+  .explore {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20%;
+  }
   #first-para {
     font-size: 25px;
     text-align: center;
+    font-weight: 900;
+    width: 80%;
+    margin-left: 10%;
   }
   #search {
     width: 100%;
@@ -22,7 +31,7 @@
     font-family: FontAwesome, "Roboto", sans-serif;
     border: transparent;
     background-color: #e4d5f7;
-    height: 60px;
+    height: 40px;
   }
   #search::-moz-placeholder {
     color: black;
@@ -33,9 +42,18 @@
   #search::placeholder {
     color: black;
   }
+  .new {
+    position: absolute;
+    color: green;
+    background-color: rgb(12, 249, 12);
+    left: 70%;
+    top: 5%;
+  }
   .p-dec {
     font-size: 15px;
     margin-left: 25px;
+    position: relative;
+    bottom: 20px;
   }
   .boutons-principaux {
     padding: 10px;
@@ -44,12 +62,15 @@
     background-color: rgb(177, 122, 205);
     border: 1px solid transparent;
     box-shadow: 1px 1px 1px 1px rgb(179, 179, 189);
-    margin-left: 15%;
     width: 70%;
+    margin-left: 15%;
+    position: relative;
+    bottom: 20px;
   }
   .menu {
     display: flex;
     flex-direction: column;
+    margin-bottom: 20%;
   }
   .menu button {
     border-radius: 20px;
@@ -58,19 +79,26 @@
     font-weight: 900;
     border: 1px solid transparent;
     box-shadow: #575757;
+    margin-left: 2%;
   }
   .menu button .fa-regular {
     position: relative;
     right: 40px;
     border: 1px solid transparent;
-    padding: 5px;
+    padding: 4px;
     border-radius: 20px;
     background-color: #8a2be2;
     color: white;
   }
+  .menu button .fa-regular i.fa-regular.fa-2 {
+    right: 50px;
+  }
+  .menu button i.fa-regular.fa-2 {
+    right: 50px;
+  }
   .menu button .fa-list {
     position: relative;
-    right: 20px;
+    right: 30px;
     color: grey;
   }
   .menu button .fa-store {
@@ -83,6 +111,10 @@
     right: 20px;
     color: grey;
   }
+  #bloc-photos-restau {
+    background-color: rgb(216, 248, 238);
+    margin-bottom: 20%;
+  }
   #bloc-photos-restau a {
     text-decoration: none;
     color: black;
@@ -91,7 +123,12 @@
     border-radius: 20px;
     margin-bottom: 20px;
     border: 1px solid transparent;
-    box-shadow: rgb(179, 179, 189);
+    box-shadow: 2px 2px rgb(189, 189, 206);
+    position: relative;
+    background-color: white;
+  }
+  #bloc-photos-restau .box-image .first-para-title {
+    font-weight: 900;
   }
   #bloc-photos-restau p {
     height: 10px;
@@ -123,12 +160,19 @@
     margin-left: 10px;
     margin-top: 10px;
   }
+  #foot span {
+    margin-left: 5px;
+  }
   #foot span i.fa-solid {
     margin: 5px;
+  }
+  #foot #mentions {
+    margin-left: 10px;
   }
   #foot a {
     text-decoration: none;
     color: white;
+    margin-left: 5px;
   }
   /* pages restau */
   i.fa-solid.fa-arrow-left {
@@ -197,6 +241,18 @@
 }
 /* tablette */
 @media screen and (min-width: 768px) and (max-width: 1023px) {
+  #presentation {
+    font-size: 10px;
+    font-weight: 900;
+  }
+  #first-para {
+    text-align: center;
+    font-size: 25px;
+  }
+  #p-dec {
+    text-align: center;
+    color: rgb(131, 124, 124);
+  }
   #image-pages-restau {
     width: 100%;
   }
@@ -219,6 +275,13 @@
   #formulaire input::placeholder {
     color: black;
   }
+  .explore {
+    display: flex;
+    flex-direction: column;
+  }
+  .new {
+    display: none;
+  }
   .menu {
     display: flex;
     flex-direction: row;
@@ -238,13 +301,12 @@
     border: 1px solid transparent;
     padding: 5px;
     border-radius: 20px;
-    background-color: #8a2be2;
-    color: white;
   }
   .menu button .fa-list {
     position: relative;
     right: 10px;
     color: grey;
+    color: #8a2be2;
   }
   .menu button .fa-store {
     position: relative;
@@ -255,91 +317,93 @@
     position: relative;
     right: 10px;
     color: grey;
+    color: #8a2be2;
+  }
+  .box-image img {
+    height: 500px;
+  }
+  .description-menu {
+    background-color: rgb(236, 246, 246);
+    position: relative;
+    bottom: 100px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+  }
+  .description-menu h2 {
+    text-align: center;
+  }
+  .description-menu .fa-regular {
+    position: relative;
+    left: 10%;
+  }
+  .box-image {
+    width: 90%;
+    margin-left: 5%;
+  }
+  .box-image img {
+    width: 100%;
+  }
+  .box-image button {
+    position: relative;
+    left: 90%;
+    bottom: 60px;
+    border-style: none;
+  }
+  .box-image a {
+    text-decoration: none;
+    color: black;
+  }
+  .div-description-menu {
+    background-color: white;
+    border: 1px solid transparent;
+    margin-bottom: 5%;
+    border-radius: 20px;
+    height: 80px;
+    box-shadow: 2px 2px rgb(227, 244, 238);
+  }
+  .div-description-menu .price {
+    width: 10%;
+    position: relative;
+    left: 90%;
+    bottom: 40px;
+  }
+  .boutons-principaux {
+    padding: 10px;
+    border-radius: 20px;
+    color: white;
+    background-color: rgb(177, 122, 205);
+    border: 1px solid transparent;
+    box-shadow: 1px 1px 1px 1px rgb(179, 179, 189);
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+  #foot {
+    background-color: #575757;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    font-size: 10px;
+  }
+  #foot img {
+    width: 40%;
+    filter: opacity(1) drop-shadow(0 0 0 white) invert(100%);
+    margin-bottom: 20px;
+    margin-left: 10px;
+    margin-top: 10px;
+  }
+  #foot span i.fa-solid {
+    margin: 5px;
+  }
+  #foot a {
+    text-decoration: none;
+    color: white;
+  }
+  .divbouton {
+    position: relative;
+    bottom: 60px;
+    text-align: center;
   }
 }
-.description-menu {
-  background-color: rgb(236, 246, 246);
-  position: relative;
-  bottom: 100px;
-  border-top-left-radius: 30px;
-  border-top-right-radius: 30px;
-}
-.description-menu h2 {
-  text-align: center;
-}
-.description-menu .fa-regular {
-  position: relative;
-  left: 10%;
-}
-
-.box-image img {
-  width: 100%;
-}
-.box-image button {
-  position: relative;
-  left: 90%;
-  bottom: 60px;
-  border-style: none;
-}
-.box-image a {
-  text-decoration: none;
-  color: black;
-}
-
-.div-description-menu {
-  background-color: white;
-  border: 1px solid transparent;
-  margin-bottom: 5%;
-  border-radius: 20px;
-  height: 80px;
-  box-shadow: 2px 2px rgb(227, 244, 238);
-}
-.div-description-menu .price {
-  width: 10%;
-  position: relative;
-  left: 90%;
-  bottom: 40px;
-}
-
-.boutons-principaux {
-  padding: 10px;
-  border-radius: 20px;
-  color: white;
-  background-color: rgb(177, 122, 205);
-  border: 1px solid transparent;
-  box-shadow: 1px 1px 1px 1px rgb(179, 179, 189);
-  position: relative;
-  left: 35%;
-  width: 30%;
-}
-
-#foot {
-  background-color: #575757;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  font-size: 10px;
-}
-#foot img {
-  width: 40%;
-  filter: opacity(1) drop-shadow(0 0 0 white) invert(100%);
-  margin-bottom: 20px;
-  margin-left: 10px;
-  margin-top: 10px;
-}
-#foot span i.fa-solid {
-  margin: 5px;
-}
-#foot a {
-  text-decoration: none;
-  color: white;
-}
-
-.divbouton {
-  position: relative;
-  bottom: 60px;
-}
-
 /* écrans larges */
 @media screen and (min-width: 1024px) {
   #logo-restaurant {
@@ -386,6 +450,9 @@
   h2 {
     text-align: center;
   }
+  .new {
+    display: none;
+  }
   #bloc-photos-restau {
     text-align: center;
   }
@@ -430,6 +497,10 @@
   }
   .div-img-pages-restau img {
     width: 70%;
+  }
+  I.fa-regular.fa-heart {
+    position: relative;
+    left: 10%;
   }
   .div-description-menu {
     background-color: white;
