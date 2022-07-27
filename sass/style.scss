@@ -65,13 +65,18 @@ top: 5%;
         padding: 10px;
         border-radius: 20px;
         color: white;
-        background-color: rgb(177, 122, 205);
+        background: linear-gradient(#FF79DA, #9356DC);
         border: 1px solid transparent;
         box-shadow: 1px 1px 1px 1px rgb(179, 179, 189);
         width: 70%;
         margin-left: 15%;
         position: relative;
         bottom: 20px;
+         &:hover{
+          background: #ebb8dd;
+          cursor: pointer;
+          box-shadow: 2px 2px #8a2be2;
+         }
       }
 
     .menu{
@@ -130,7 +135,7 @@ top: 5%;
 
 
 #bloc-photos-restau{
-background-color: rgb(216, 248, 238);
+background-color: rgb(240, 255, 250);
 margin-bottom: 20%;
   & a{
     text-decoration: none;
@@ -260,7 +265,7 @@ box-shadow:2px 2px rgb(227, 244, 238);
   position: relative;
   bottom: 20%;
   font-size: 10px;
-  width: 85%;
+  width: 86%;
 }
 & .para-description-menu{
   font-weight: $nuance;
@@ -326,6 +331,8 @@ box-shadow:2px 2px rgb(227, 244, 238);
 .explore{
         display: flex;
         flex-direction: column;
+        text-align: center;
+        margin-bottom: 10%;
       }
 
       .new{
@@ -375,13 +382,19 @@ justify-content: space-between;
       }
 }
 
-
+ h2{
+    text-align: center;
+  }
 
 
 
 .box-image{
   & img{
     height: 500px;
+  }
+
+  & .first-para-title{
+    font-weight: $nuance;
   }
 }
 
@@ -393,9 +406,7 @@ background-color: rgb(236, 246, 246);
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
 
-  & h2{
-    text-align: center;
-  }
+  
   & .fa-regular{
     position: relative;
     left: 10%;
@@ -408,13 +419,14 @@ margin-left: 5%;
 
   & img{
     width: 100%;
-    
+    border-radius: 30px;
   }
   & button{
     position: relative;
     left: 90%;
     bottom: 60px;
     border-style: none;
+    background-color: transparent;
   }
    & a{
     text-decoration: none;
@@ -499,6 +511,66 @@ box-shadow:2px 2px rgb(227, 244, 238);
 
 @media screen and (min-width: 1024px)  {
 
+/*  @keyframes hide {
+    0%{
+      transform: scale(1);
+    }
+    100%{
+      transform: scale(0);
+    }
+  }
+
+  @keyframes loaderspinner { 
+    0%{
+     margin-left: 90%;
+         }
+         100%{
+       
+     }   
+  }
+
+  .container{
+position: fixed;
+top:0;
+right: 0;
+bottom: 0;
+left: 0;
+background: white;
+z-index: 2;
+animation: hide 3s forwards 4s;
+
+
+
+    & .bar{
+width: 200px;
+height: 25px;
+border: 3px solid #eaeaea;
+margin: 100px auto;
+border-radius: 7px;
+position: relative;
+background: rgba(255, 255, 255, 0.6);
+
+& :after{
+  content: "chargement...";
+  position: absolute;
+  left: 25%;
+  top: 150%;
+  
+}
+
+& .sphere{
+  display: block;
+  width: 24px;
+  height: 100%;
+  background: #eaeaea;
+  border-radius: 50%;
+  animation: loaderspinner 3s infinite ease-in-out alternate;
+}
+    }
+  }*/
+   
+
+
 #logo-restaurant{
 text-align: center;
 }
@@ -522,6 +594,7 @@ input::placeholder{
 #first-para{
   font-size: 40px;
   text-align: center;
+  
 }
 .p-dec{
   text-align: center;
@@ -534,12 +607,18 @@ input::placeholder{
         padding: 10px;
         border-radius: 20px;
         color: white;
-        background-color: rgb(177, 122, 205);
+        background: linear-gradient(#FF79DA, #9356DC);
         border: 1px solid transparent;
         box-shadow: 1px 1px 1px 1px rgb(179, 179, 189);
         position: relative;
         left: 40%;
         width: 20%;
+
+        &:hover{
+          background: #ebb8dd;
+          cursor: pointer;
+          box-shadow: 2px 2px #8a2be2;
+         }
     }
 
 
@@ -548,7 +627,51 @@ input::placeholder{
       display: flex;
       flex-direction: row;
       justify-content: space-between;
-    }
+
+      
+
+
+& button{
+        border-radius: 20px;
+        margin-bottom: 15px;
+        height: 70px;
+        font-weight: $nuance;
+        border: 1px solid transparent;
+        box-shadow: #575757;
+
+        & .fa-regular{
+          position: relative;
+          right: 15px;
+          border: 1px solid transparent;
+          padding: 5px;
+          border-radius: 20px;
+          
+        }
+        & .fa-list{
+          position: relative;
+          right: 10px;
+          color: grey;
+          color: #8a2be2;
+        }
+         .fa-store{
+          position: relative;
+          right: 10px;
+          color:#8a2be2;
+         }
+
+        & .fa.fa-mobile-screen{
+          position: relative;
+          right: 10px;
+          color: grey;
+          color: #8a2be2;
+        }
+      }
+}
+
+
+
+
+    
 
 h2{
   text-align: center;
@@ -565,9 +688,14 @@ text-align: center;
         color: black;
       }
 
+      & .first-para-title{
+        font-weight: $nuance;
+      }
+
       & img{
         width: 50%;
 height: 400px;
+border-radius: 30px;
       }
 
       & button{
@@ -575,6 +703,7 @@ height: 400px;
         left: 20%;
         bottom: 60px;
         border-style: none;
+        background-color: transparent;
       }
     }
 
@@ -618,10 +747,18 @@ text-align: center;
   }
 }
 
-I.fa-regular.fa-heart{
+i.fas.fa-heart{
   position: relative;
   left: 10%;
+  transition: all 2s;
+ 
+  &:hover{
+    cursor: pointer;
+    color: #8a2be2;
+  }
 }
+  
+
 
 
 .div-description-menu{

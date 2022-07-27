@@ -59,13 +59,18 @@
     padding: 10px;
     border-radius: 20px;
     color: white;
-    background-color: rgb(177, 122, 205);
+    background: linear-gradient(#FF79DA, #9356DC);
     border: 1px solid transparent;
     box-shadow: 1px 1px 1px 1px rgb(179, 179, 189);
     width: 70%;
     margin-left: 15%;
     position: relative;
     bottom: 20px;
+  }
+  .boutons-principaux:hover {
+    background: #ebb8dd;
+    cursor: pointer;
+    box-shadow: 2px 2px #8a2be2;
   }
   .menu {
     display: flex;
@@ -112,7 +117,7 @@
     color: grey;
   }
   #bloc-photos-restau {
-    background-color: rgb(216, 248, 238);
+    background-color: rgb(240, 255, 250);
     margin-bottom: 20%;
   }
   #bloc-photos-restau a {
@@ -222,7 +227,7 @@
     position: relative;
     bottom: 20%;
     font-size: 10px;
-    width: 85%;
+    width: 86%;
   }
   .description-menu .div-description-menu .para-description-menu {
     font-weight: 900;
@@ -278,6 +283,8 @@
   .explore {
     display: flex;
     flex-direction: column;
+    text-align: center;
+    margin-bottom: 10%;
   }
   .new {
     display: none;
@@ -319,8 +326,14 @@
     color: grey;
     color: #8a2be2;
   }
+  h2 {
+    text-align: center;
+  }
   .box-image img {
     height: 500px;
+  }
+  .box-image .first-para-title {
+    font-weight: 900;
   }
   .description-menu {
     background-color: rgb(236, 246, 246);
@@ -328,9 +341,6 @@
     bottom: 100px;
     border-top-left-radius: 30px;
     border-top-right-radius: 30px;
-  }
-  .description-menu h2 {
-    text-align: center;
   }
   .description-menu .fa-regular {
     position: relative;
@@ -342,12 +352,14 @@
   }
   .box-image img {
     width: 100%;
+    border-radius: 30px;
   }
   .box-image button {
     position: relative;
     left: 90%;
     bottom: 60px;
     border-style: none;
+    background-color: transparent;
   }
   .box-image a {
     text-decoration: none;
@@ -406,6 +418,63 @@
 }
 /* écrans larges */
 @media screen and (min-width: 1024px) {
+  /*  @keyframes hide {
+      0%{
+        transform: scale(1);
+      }
+      100%{
+        transform: scale(0);
+      }
+    }
+
+    @keyframes loaderspinner { 
+      0%{
+       margin-left: 90%;
+           }
+           100%{
+
+       }   
+    }
+
+    .container{
+  position: fixed;
+  top:0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: white;
+  z-index: 2;
+  animation: hide 3s forwards 4s;
+
+
+
+      & .bar{
+  width: 200px;
+  height: 25px;
+  border: 3px solid #eaeaea;
+  margin: 100px auto;
+  border-radius: 7px;
+  position: relative;
+  background: rgba(255, 255, 255, 0.6);
+
+  & :after{
+    content: "chargement...";
+    position: absolute;
+    left: 25%;
+    top: 150%;
+
+  }
+
+  & .sphere{
+    display: block;
+    width: 24px;
+    height: 100%;
+    background: #eaeaea;
+    border-radius: 50%;
+    animation: loaderspinner 3s infinite ease-in-out alternate;
+  }
+      }
+    }*/
   #logo-restaurant {
     text-align: center;
   }
@@ -435,17 +504,54 @@
     padding: 10px;
     border-radius: 20px;
     color: white;
-    background-color: rgb(177, 122, 205);
+    background: linear-gradient(#FF79DA, #9356DC);
     border: 1px solid transparent;
     box-shadow: 1px 1px 1px 1px rgb(179, 179, 189);
     position: relative;
     left: 40%;
     width: 20%;
   }
+  .boutons-principaux:hover {
+    background: #ebb8dd;
+    cursor: pointer;
+    box-shadow: 2px 2px #8a2be2;
+  }
   .menu {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+  }
+  .menu button {
+    border-radius: 20px;
+    margin-bottom: 15px;
+    height: 70px;
+    font-weight: 900;
+    border: 1px solid transparent;
+    box-shadow: #575757;
+  }
+  .menu button .fa-regular {
+    position: relative;
+    right: 15px;
+    border: 1px solid transparent;
+    padding: 5px;
+    border-radius: 20px;
+  }
+  .menu button .fa-list {
+    position: relative;
+    right: 10px;
+    color: grey;
+    color: #8a2be2;
+  }
+  .menu button .fa-store {
+    position: relative;
+    right: 10px;
+    color: #8a2be2;
+  }
+  .menu button .fa.fa-mobile-screen {
+    position: relative;
+    right: 10px;
+    color: grey;
+    color: #8a2be2;
   }
   h2 {
     text-align: center;
@@ -460,15 +566,20 @@
     text-decoration: none;
     color: black;
   }
+  #bloc-photos-restau .first-para-title {
+    font-weight: 900;
+  }
   #bloc-photos-restau img {
     width: 50%;
     height: 400px;
+    border-radius: 30px;
   }
   #bloc-photos-restau button {
     position: relative;
     left: 20%;
     bottom: 60px;
     border-style: none;
+    background-color: transparent;
   }
   #foot {
     background-color: #575757;
@@ -498,9 +609,14 @@
   .div-img-pages-restau img {
     width: 70%;
   }
-  I.fa-regular.fa-heart {
+  i.fas.fa-heart {
     position: relative;
     left: 10%;
+    transition: all 2s;
+  }
+  i.fas.fa-heart:hover {
+    cursor: pointer;
+    color: #8a2be2;
   }
   .div-description-menu {
     background-color: white;
