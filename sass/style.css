@@ -418,16 +418,23 @@
 }
 /* écrans larges */
 @media screen and (min-width: 1024px) {
-  /*  @keyframes hide {
-      0%{
-        transform: scale(1);
-      }
-      100%{
-        transform: scale(0);
-      }
+  @-webkit-keyframes hide {
+    0% {
+      transform: scale(1);
     }
-
-    @keyframes loaderspinner { 
+    100% {
+      transform: scale(0);
+    }
+  }
+  @keyframes hide {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(0);
+    }
+  }
+  /*@keyframes loaderspinner { 
       0%{
        margin-left: 90%;
            }
@@ -618,18 +625,77 @@
     cursor: pointer;
     color: #8a2be2;
   }
+  .description-menu {
+    -webkit-animation: show 3s ease forwards 4s;
+            animation: show 3s ease forwards 4s;
+  }
+  .description-menu .fa-regular.fa-heart {
+    position: relative;
+    left: 10%;
+  }
   .div-description-menu {
-    background-color: white;
     border: 1px solid transparent;
     margin-bottom: 5%;
-    border-radius: 20px;
+    border-radius: 10px;
     height: 80px;
     box-shadow: 2px 2px rgb(227, 244, 238);
+    width: 100%;
+    transition-property: width;
+    transition-duration: 0.5s;
+    transition-timing-function: linear;
+    overflow: hidden;
+    transition: width 0.3s linear;
+  }
+  .div-description-menu i.fa-solid.fa-circle-chevron-down {
+    transition: transform 0.3s linear;
+    color: white;
+  }
+  .div-description-menu:hover {
+    width: 95%;
+    overflow: visible;
+  }
+  .div-description-menu:hover .fa-solid.fa-circle-chevron-down {
+    transform: rotate(360deg);
+  }
+  .div-description-menu .appear {
+    background-color: rgb(135, 208, 135);
+    width: 5%;
+    position: relative;
+    left: 100%;
+    bottom: 140px;
+    height: 80px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+  .div-description-menu .appear i {
+    position: relative;
+    left: 25%;
+    top: 25%;
   }
   .div-description-menu .price {
     width: 10%;
     position: relative;
     left: 90%;
     bottom: 40px;
+  }
+  @-webkit-keyframes show {
+    0% {
+      transform: scale(0);
+      opacity: 0.3;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  @keyframes show {
+    0% {
+      transform: scale(0);
+      opacity: 0.3;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
   }
 }/*# sourceMappingURL=style.css.map */

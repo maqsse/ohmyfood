@@ -511,7 +511,7 @@ box-shadow:2px 2px rgb(227, 244, 238);
 
 @media screen and (min-width: 1024px)  {
 
-/*  @keyframes hide {
+  @keyframes hide {
     0%{
       transform: scale(1);
     }
@@ -520,7 +520,7 @@ box-shadow:2px 2px rgb(227, 244, 238);
     }
   }
 
-  @keyframes loaderspinner { 
+  /*@keyframes loaderspinner { 
     0%{
      margin-left: 90%;
          }
@@ -758,16 +758,64 @@ i.fas.fa-heart{
   }
 }
   
+.description-menu{
+animation: show 3s ease forwards 4s;
 
+ 
+
+  & .fa-regular.fa-heart{
+position: relative;
+left: 10%;
+
+  }
+}
 
 
 .div-description-menu{
-background-color: white;
+//background-color: white;
     border: 1px solid transparent;
     margin-bottom: 5%;
-border-radius: 20px;
+border-radius: 10px;
 height: 80px;
 box-shadow:2px 2px rgb(227, 244, 238);
+
+width: 100%;
+transition-property: width;
+transition-duration: 0.5s;
+transition-timing-function: linear;
+overflow: hidden;
+transition: width 0.3s linear;
+
+& i.fa-solid.fa-circle-chevron-down{
+  transition: transform 0.3s linear;
+  color: white;
+}
+
+&:hover{
+width: 95%;
+overflow: visible;
+& .fa-solid.fa-circle-chevron-down{
+  transform: rotate(360deg);
+}
+
+}
+
+& .appear{
+  background-color: rgb(135, 208, 135);
+  width: 5%;
+  position: relative;
+  left: 100%;
+  bottom: 140px;
+  height: 80px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  
+  & i{
+    position: relative;
+    left: 25%;
+    top: 25%;
+  }
+}
 
 
 
@@ -779,6 +827,22 @@ box-shadow:2px 2px rgb(227, 244, 238);
   }
 }
 
+//keyframes apparition progressive menus//
+@keyframes show {
+    0%{
+      transform: scale(0);
+      opacity: 0.3;
+    }
+    100%{
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
 
 
 }
+
+
+
+
+
