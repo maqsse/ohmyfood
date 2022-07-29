@@ -242,6 +242,7 @@ hr{
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
 
+
   & h2{
     padding-top: 5%;
     padding-left: 3%;
@@ -260,6 +261,71 @@ hr{
 border-radius: 20px;
 height: 80px;
 box-shadow:2px 2px rgb(227, 244, 238);
+overflow: hidden;
+/*ANIMATION MENUS*/
+transition-property: width;
+transition-duration: 5s;
+transition-timing-function: linear;
+transition: width 5s linear;
+
+& i.fa-solid.fa-circle-chevron-down{
+  transition: transform 1s linear;
+  color: white;
+}
+
+&:hover{
+visibility: visible;
+width: 90%;
+
+& .fa-solid.fa-circle-chevron-down{
+  transform: rotate(360deg);
+  
+}
+& .appear{
+  
+  transform: translate(30%);
+  visibility: visible;
+}
+
+
+}
+
+& .appear{
+  background-color: rgb(135, 208, 135);
+  width: 10%;
+  position: relative;
+  left: 100%;
+  bottom: 140px;
+  height: 80px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  visibility: hidden;
+  & i{
+    position: relative;
+    left: 25%;
+    top: 25%;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 & .deuxieme-para{
   position: relative;
@@ -285,7 +351,71 @@ box-shadow:2px 2px rgb(227, 244, 238);
   bottom: 50px;
 }
 
+/* loader spinner*/
+
+@keyframes hide {
+    0%{
+      transform: scale(1);
+    }
+    100%{
+      transform: scale(0);
+    }
+  }
+
+  @keyframes loaderspinner { 
+    0%{
+     margin-left: 90%;
+         }
+         100%{
+       
+     }   
+  }
+
+.container{
+position: fixed;
+top:0;
+right: 0;
+bottom: 0;
+left: 0;
+background: white;
+z-index: 2;
+animation: hide 3s forwards 4s;
+
+
+
+    & .bar{
+width: 200px;
+height: 25px;
+border: 3px solid #eaeaea;
+margin: 100px auto;
+border-radius: 7px;
+position: relative;
+background: rgba(255, 255, 255, 0.6);
+
+& :after{
+  content: "chargement...";
+  position: absolute;
+  left: 25%;
+  top: 150%;
+  
 }
+
+& .sphere{
+  display: block;
+  width: 24px;
+  height: 100%;
+  background: #eaeaea;
+  border-radius: 50%;
+  animation: loaderspinner 3s infinite ease-in-out alternate;
+}
+    }
+  }
+
+  
+}
+
+
+
 
 /* tablette */ 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
@@ -511,6 +641,8 @@ box-shadow:2px 2px rgb(227, 244, 238);
 
 @media screen and (min-width: 1024px)  {
 
+/* loader spinner */
+
   @keyframes hide {
     0%{
       transform: scale(1);
@@ -520,7 +652,7 @@ box-shadow:2px 2px rgb(227, 244, 238);
     }
   }
 
-  /*@keyframes loaderspinner { 
+  @keyframes loaderspinner { 
     0%{
      margin-left: 90%;
          }
@@ -567,8 +699,10 @@ background: rgba(255, 255, 255, 0.6);
   animation: loaderspinner 3s infinite ease-in-out alternate;
 }
     }
-  }*/
+  }
    
+
+
 
 
 #logo-restaurant{
@@ -613,10 +747,12 @@ input::placeholder{
         position: relative;
         left: 40%;
         width: 20%;
+        transition: background 4s;
+
 
         &:hover{
-          background: #ebb8dd;
-          cursor: pointer;
+          background: #e396ce;
+         
           box-shadow: 2px 2px #8a2be2;
          }
     }
@@ -772,30 +908,37 @@ left: 10%;
 
 
 .div-description-menu{
-//background-color: white;
+
     border: 1px solid transparent;
     margin-bottom: 5%;
 border-radius: 10px;
 height: 80px;
 box-shadow:2px 2px rgb(227, 244, 238);
-
 width: 100%;
-transition-property: width;
-transition-duration: 0.5s;
-transition-timing-function: linear;
 overflow: hidden;
-transition: width 0.3s linear;
+/*animation menus*/
+
+transition-property: width;
+transition-duration: 1s;
+transition-timing-function: linear;
+transition: width 1s linear;
 
 & i.fa-solid.fa-circle-chevron-down{
-  transition: transform 0.3s linear;
+  transition: transform 1s linear;
   color: white;
+  padding: 3%;
 }
 
 &:hover{
 width: 95%;
-overflow: visible;
+visibility: visible;
 & .fa-solid.fa-circle-chevron-down{
   transform: rotate(360deg);
+  
+}
+& .appear{
+  transform: scaleX(3);
+  visibility: visible;
 }
 
 }
@@ -809,7 +952,7 @@ overflow: visible;
   height: 80px;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
-  
+  visibility: hidden;
   & i{
     position: relative;
     left: 25%;

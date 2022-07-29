@@ -222,6 +222,43 @@
     border-radius: 20px;
     height: 80px;
     box-shadow: 2px 2px rgb(227, 244, 238);
+    overflow: hidden;
+    /*ANIMATION MENUS*/
+    transition-property: width;
+    transition-duration: 5s;
+    transition-timing-function: linear;
+    transition: width 5s linear;
+  }
+  .description-menu .div-description-menu i.fa-solid.fa-circle-chevron-down {
+    transition: transform 1s linear;
+    color: white;
+  }
+  .description-menu .div-description-menu:hover {
+    visibility: visible;
+    width: 90%;
+  }
+  .description-menu .div-description-menu:hover .fa-solid.fa-circle-chevron-down {
+    transform: rotate(360deg);
+  }
+  .description-menu .div-description-menu:hover .appear {
+    transform: translate(30%);
+    visibility: visible;
+  }
+  .description-menu .div-description-menu .appear {
+    background-color: rgb(135, 208, 135);
+    width: 10%;
+    position: relative;
+    left: 100%;
+    bottom: 140px;
+    height: 80px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    visibility: hidden;
+  }
+  .description-menu .div-description-menu .appear i {
+    position: relative;
+    left: 25%;
+    top: 25%;
   }
   .description-menu .div-description-menu .deuxieme-para {
     position: relative;
@@ -242,6 +279,68 @@
   .divbouton {
     position: relative;
     bottom: 50px;
+  }
+  /* loader spinner*/
+  @-webkit-keyframes hide {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(0);
+    }
+  }
+  @keyframes hide {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(0);
+    }
+  }
+  @-webkit-keyframes loaderspinner {
+    0% {
+      margin-left: 90%;
+    }
+  }
+  @keyframes loaderspinner {
+    0% {
+      margin-left: 90%;
+    }
+  }
+  .container {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: white;
+    z-index: 2;
+    -webkit-animation: hide 3s forwards 4s;
+            animation: hide 3s forwards 4s;
+  }
+  .container .bar {
+    width: 200px;
+    height: 25px;
+    border: 3px solid #eaeaea;
+    margin: 100px auto;
+    border-radius: 7px;
+    position: relative;
+    background: rgba(255, 255, 255, 0.6);
+  }
+  .container .bar :after {
+    content: "chargement...";
+    position: absolute;
+    left: 25%;
+    top: 150%;
+  }
+  .container .bar .sphere {
+    display: block;
+    width: 24px;
+    height: 100%;
+    background: #eaeaea;
+    border-radius: 50%;
+    -webkit-animation: loaderspinner 3s infinite ease-in-out alternate;
+            animation: loaderspinner 3s infinite ease-in-out alternate;
   }
 }
 /* tablette */
@@ -418,6 +517,7 @@
 }
 /* écrans larges */
 @media screen and (min-width: 1024px) {
+  /* loader spinner */
   @-webkit-keyframes hide {
     0% {
       transform: scale(1);
@@ -434,54 +534,51 @@
       transform: scale(0);
     }
   }
-  /*@keyframes loaderspinner { 
-      0%{
-       margin-left: 90%;
-           }
-           100%{
-
-       }   
+  @-webkit-keyframes loaderspinner {
+    0% {
+      margin-left: 90%;
     }
-
-    .container{
-  position: fixed;
-  top:0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background: white;
-  z-index: 2;
-  animation: hide 3s forwards 4s;
-
-
-
-      & .bar{
-  width: 200px;
-  height: 25px;
-  border: 3px solid #eaeaea;
-  margin: 100px auto;
-  border-radius: 7px;
-  position: relative;
-  background: rgba(255, 255, 255, 0.6);
-
-  & :after{
+  }
+  @keyframes loaderspinner {
+    0% {
+      margin-left: 90%;
+    }
+  }
+  .container {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: white;
+    z-index: 2;
+    -webkit-animation: hide 3s forwards 4s;
+            animation: hide 3s forwards 4s;
+  }
+  .container .bar {
+    width: 200px;
+    height: 25px;
+    border: 3px solid #eaeaea;
+    margin: 100px auto;
+    border-radius: 7px;
+    position: relative;
+    background: rgba(255, 255, 255, 0.6);
+  }
+  .container .bar :after {
     content: "chargement...";
     position: absolute;
     left: 25%;
     top: 150%;
-
   }
-
-  & .sphere{
+  .container .bar .sphere {
     display: block;
     width: 24px;
     height: 100%;
     background: #eaeaea;
     border-radius: 50%;
-    animation: loaderspinner 3s infinite ease-in-out alternate;
+    -webkit-animation: loaderspinner 3s infinite ease-in-out alternate;
+            animation: loaderspinner 3s infinite ease-in-out alternate;
   }
-      }
-    }*/
   #logo-restaurant {
     text-align: center;
   }
@@ -517,10 +614,10 @@
     position: relative;
     left: 40%;
     width: 20%;
+    transition: background 4s;
   }
   .boutons-principaux:hover {
-    background: #ebb8dd;
-    cursor: pointer;
+    background: #e396ce;
     box-shadow: 2px 2px #8a2be2;
   }
   .menu {
@@ -640,22 +737,28 @@
     height: 80px;
     box-shadow: 2px 2px rgb(227, 244, 238);
     width: 100%;
-    transition-property: width;
-    transition-duration: 0.5s;
-    transition-timing-function: linear;
     overflow: hidden;
-    transition: width 0.3s linear;
+    /*animation menus*/
+    transition-property: width;
+    transition-duration: 1s;
+    transition-timing-function: linear;
+    transition: width 1s linear;
   }
   .div-description-menu i.fa-solid.fa-circle-chevron-down {
-    transition: transform 0.3s linear;
+    transition: transform 1s linear;
     color: white;
+    padding: 3%;
   }
   .div-description-menu:hover {
     width: 95%;
-    overflow: visible;
+    visibility: visible;
   }
   .div-description-menu:hover .fa-solid.fa-circle-chevron-down {
     transform: rotate(360deg);
+  }
+  .div-description-menu:hover .appear {
+    transform: scaleX(3);
+    visibility: visible;
   }
   .div-description-menu .appear {
     background-color: rgb(135, 208, 135);
@@ -666,6 +769,7 @@
     height: 80px;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
+    visibility: hidden;
   }
   .div-description-menu .appear i {
     position: relative;
