@@ -151,6 +151,20 @@
     border-style: none;
     background-color: transparent;
   }
+  #bloc-photos-restau i.fa-regular.fa-heart {
+    position: relative;
+    right: 30px;
+  }
+  #bloc-photos-restau i.fas.fa-heart {
+    opacity: 0;
+    transition: all 2s;
+  }
+  #bloc-photos-restau i.fas.fa-heart:hover {
+    opacity: 1;
+    color: #8a2be2;
+    border-style: none;
+    cursor: pointer;
+  }
   #foot {
     background-color: #575757;
     color: white;
@@ -222,38 +236,44 @@
     border-radius: 20px;
     height: 80px;
     box-shadow: 2px 2px rgb(227, 244, 238);
-    overflow: hidden;
+    /*overflow: hidden;*/
+    transition: all 1s;
     /*ANIMATION MENUS*/
-    transition-property: width;
-    transition-duration: 5s;
-    transition-timing-function: linear;
-    transition: width 5s linear;
   }
   .description-menu .div-description-menu i.fa-solid.fa-circle-chevron-down {
     transition: transform 1s linear;
     color: white;
   }
   .description-menu .div-description-menu:hover {
+    padding-right: 20%;
     visibility: visible;
-    width: 90%;
+  }
+  .description-menu .div-description-menu:hover p.para-description-menu {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+  .description-menu .div-description-menu:hover p.deuxieme-para {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
   }
   .description-menu .div-description-menu:hover .fa-solid.fa-circle-chevron-down {
     transform: rotate(360deg);
   }
   .description-menu .div-description-menu:hover .appear {
-    transform: translate(30%);
     visibility: visible;
   }
   .description-menu .div-description-menu .appear {
     background-color: rgb(135, 208, 135);
-    width: 10%;
     position: relative;
-    left: 100%;
-    bottom: 140px;
-    height: 80px;
+    left: 110%;
+    bottom: 133px;
+    height: 100%;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
-    visibility: hidden;
+    width: 50px;
+    /*visibility: hidden;*/
   }
   .description-menu .div-description-menu .appear i {
     position: relative;
@@ -715,12 +735,15 @@
   }
   i.fas.fa-heart {
     position: relative;
-    left: 10%;
+    left: 50%;
     transition: all 2s;
+    opacity: 0;
+    border-style: none;
   }
   i.fas.fa-heart:hover {
     cursor: pointer;
     color: #8a2be2;
+    opacity: 1;
   }
   .description-menu {
     -webkit-animation: show 3s ease forwards 4s;
@@ -739,10 +762,7 @@
     width: 100%;
     overflow: hidden;
     /*animation menus*/
-    transition-property: width;
-    transition-duration: 1s;
-    transition-timing-function: linear;
-    transition: width 1s linear;
+    transition: 3s;
   }
   .div-description-menu i.fa-solid.fa-circle-chevron-down {
     transition: transform 1s linear;
@@ -750,26 +770,27 @@
     padding: 3%;
   }
   .div-description-menu:hover {
-    width: 95%;
+    width: 90%;
     visibility: visible;
   }
   .div-description-menu:hover .fa-solid.fa-circle-chevron-down {
     transform: rotate(360deg);
   }
   .div-description-menu:hover .appear {
-    transform: scaleX(3);
+    transform: translate(-100px);
     visibility: visible;
+    transition: 3s;
   }
   .div-description-menu .appear {
     background-color: rgb(135, 208, 135);
-    width: 5%;
+    width: 100px;
     position: relative;
     left: 100%;
     bottom: 140px;
     height: 80px;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
-    visibility: hidden;
+    /*visibility: hidden;*/
   }
   .div-description-menu .appear i {
     position: relative;
