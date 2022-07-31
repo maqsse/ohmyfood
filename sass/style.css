@@ -1,9 +1,10 @@
 @charset "UTF-8";
+body {
+  font-family: "roboto", sans-serif;
+}
+
 /* mobiles */
 @media screen and (min-width: 320px) and (max-width: 767px) {
-  body {
-    font-family: "roboto", sans-serif;
-  }
   #logo-restaurant img {
     width: 50%;
     margin-left: 25%;
@@ -16,6 +17,7 @@
     display: flex;
     flex-direction: column;
     margin-bottom: 20%;
+    background-color: rgb(243, 243, 250);
   }
   #first-para {
     font-size: 25px;
@@ -30,7 +32,7 @@
     font-weight: 900;
     font-family: FontAwesome, "Roboto", sans-serif;
     border: transparent;
-    background-color: #e4d5f7;
+    background-color: #e7e9e9;
     height: 40px;
   }
   #search::-moz-placeholder {
@@ -44,10 +46,13 @@
   }
   .new {
     position: absolute;
-    color: green;
-    background-color: rgb(12, 249, 12);
+    color: rgb(7, 121, 7);
+    background-color: rgb(43, 214, 123);
     left: 70%;
     top: 5%;
+    font-size: 5px;
+    padding: 6px;
+    border-radius: 2px;
   }
   .p-dec {
     font-size: 15px;
@@ -68,7 +73,7 @@
     bottom: 20px;
   }
   .boutons-principaux:hover {
-    background: #ebb8dd;
+    background: #d096c0;
     cursor: pointer;
     box-shadow: 2px 2px #8a2be2;
   }
@@ -78,6 +83,7 @@
     margin-bottom: 20%;
   }
   .menu button {
+    background-color: rgb(243, 243, 250);
     border-radius: 20px;
     margin-bottom: 15px;
     height: 70px;
@@ -85,12 +91,13 @@
     border: 1px solid transparent;
     box-shadow: #575757;
     margin-left: 2%;
+    font-family: "roboto", sans serif;
   }
   .menu button .fa-regular {
     position: relative;
     right: 40px;
     border: 1px solid transparent;
-    padding: 4px;
+    padding: 7px;
     border-radius: 20px;
     background-color: #8a2be2;
     color: white;
@@ -119,6 +126,7 @@
   #bloc-photos-restau {
     background-color: rgb(240, 255, 250);
     margin-bottom: 20%;
+    /* animation coeurs*/
   }
   #bloc-photos-restau a {
     text-decoration: none;
@@ -146,24 +154,23 @@
   }
   #bloc-photos-restau button {
     position: relative;
-    left: 80%;
+    left: 75%;
     bottom: 50px;
     border-style: none;
     background-color: transparent;
   }
-  #bloc-photos-restau i.fa-regular.fa-heart {
-    position: relative;
-    right: 30px;
-  }
   #bloc-photos-restau i.fas.fa-heart {
     opacity: 0;
-    transition: all 2s;
+    transition: all 1s;
+    border-style: none;
+    position: relative;
+    left: 30px;
   }
   #bloc-photos-restau i.fas.fa-heart:hover {
     opacity: 1;
     color: #8a2be2;
-    border-style: none;
     cursor: pointer;
+    border-style: none;
   }
   #foot {
     background-color: #575757;
@@ -221,6 +228,7 @@
     bottom: 100px;
     border-top-left-radius: 30px;
     border-top-right-radius: 30px;
+    overflow: hidden;
   }
   .description-menu h2 {
     padding-top: 5%;
@@ -230,13 +238,15 @@
     margin-left: 10%;
   }
   .description-menu .div-description-menu {
+    /* animation menu progressif */
+    -webkit-animation: show 2s linear forwards 2s;
+            animation: show 2s linear forwards 2s;
     background-color: white;
     border: 1px solid transparent;
     margin-bottom: 5%;
     border-radius: 20px;
     height: 80px;
     box-shadow: 2px 2px rgb(227, 244, 238);
-    /*overflow: hidden;*/
     transition: all 1s;
     /*ANIMATION MENUS*/
   }
@@ -273,7 +283,6 @@
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
     width: 50px;
-    /*visibility: hidden;*/
   }
   .description-menu .div-description-menu .appear i {
     position: relative;
@@ -362,11 +371,107 @@
     -webkit-animation: loaderspinner 3s infinite ease-in-out alternate;
             animation: loaderspinner 3s infinite ease-in-out alternate;
   }
+  @-webkit-keyframes show {
+    0% {
+      margin-top: 1000px;
+    }
+    20% {
+      margin-top: 800px;
+    }
+    40% {
+      margin-top: 400px;
+    }
+    60% {
+      margin-top: 300px;
+    }
+    100% {
+      margin-top: 0px;
+    }
+  }
+  @keyframes show {
+    0% {
+      margin-top: 1000px;
+    }
+    20% {
+      margin-top: 800px;
+    }
+    40% {
+      margin-top: 400px;
+    }
+    60% {
+      margin-top: 300px;
+    }
+    100% {
+      margin-top: 0px;
+    }
+  }
 }
 /* tablette */
 @media screen and (min-width: 768px) and (max-width: 1023px) {
+  /* loader spinner */
+  @-webkit-keyframes hide {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(0);
+    }
+  }
+  @keyframes hide {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(0);
+    }
+  }
+  @-webkit-keyframes loaderspinner {
+    0% {
+      margin-left: 90%;
+    }
+  }
+  @keyframes loaderspinner {
+    0% {
+      margin-left: 90%;
+    }
+  }
+  .container {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: white;
+    z-index: 2;
+    -webkit-animation: hide 3s forwards 4s;
+            animation: hide 3s forwards 4s;
+  }
+  .container .bar {
+    width: 200px;
+    height: 25px;
+    border: 3px solid #eaeaea;
+    margin: 100px auto;
+    border-radius: 7px;
+    position: relative;
+    background: rgba(255, 255, 255, 0.6);
+  }
+  .container .bar :after {
+    content: "chargement...";
+    position: absolute;
+    left: 25%;
+    top: 150%;
+  }
+  .container .bar .sphere {
+    display: block;
+    width: 24px;
+    height: 100%;
+    background: #eaeaea;
+    border-radius: 50%;
+    -webkit-animation: loaderspinner 3s infinite ease-in-out alternate;
+            animation: loaderspinner 3s infinite ease-in-out alternate;
+  }
   #presentation {
-    font-size: 10px;
+    font-size: 20px;
     font-weight: 900;
   }
   #first-para {
@@ -389,6 +494,8 @@
     width: 100%;
     text-align: center;
     font-weight: 900;
+    background-color: #e7e9e9;
+    border-style: none;
   }
   #formulaire input::-moz-placeholder {
     color: black;
@@ -420,6 +527,7 @@
     font-weight: 900;
     border: 1px solid transparent;
     box-shadow: #575757;
+    font-family: "roboto", sans serif;
   }
   .menu button .fa-regular {
     position: relative;
@@ -485,18 +593,79 @@
     color: black;
   }
   .div-description-menu {
+    /* animation menu progressif */
+    -webkit-animation: show 2s linear forwards 2s;
+            animation: show 2s linear forwards 2s;
     background-color: white;
     border: 1px solid transparent;
     margin-bottom: 5%;
-    border-radius: 20px;
+    border-radius: 10px;
     height: 80px;
     box-shadow: 2px 2px rgb(227, 244, 238);
+    /* animation menus */
+    overflow: hidden;
+    transition: 1s;
+  }
+  .div-description-menu i.fa-solid.fa-circle-chevron-down {
+    transition: transform 1s linear;
+    color: white;
+    padding: 3%;
+  }
+  .div-description-menu:hover {
+    padding-right: 10%;
+    visibility: visible;
+  }
+  .div-description-menu:hover p.para-description-menu {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+  .div-description-menu:hover p.deuxieme-para {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+  .div-description-menu:hover .fa-solid.fa-circle-chevron-down {
+    transform: rotate(360deg);
+  }
+  .div-description-menu:hover .appear {
+    visibility: visible;
+    transition: 3s;
+  }
+  .div-description-menu .appear {
+    background-color: rgb(135, 208, 135);
+    width: 100px;
+    position: relative;
+    left: 100%;
+    bottom: 140px;
+    height: 80px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+  .div-description-menu .appear i {
+    position: relative;
+    left: 25%;
+    top: 25%;
   }
   .div-description-menu .price {
     width: 10%;
     position: relative;
     left: 90%;
     bottom: 40px;
+  }
+  /* animation coeurs */
+  i.fas.fa-heart {
+    opacity: 0;
+    transition: all 1s;
+    border-style: none;
+    position: relative;
+    left: 30px;
+  }
+  i.fas.fa-heart:hover {
+    opacity: 1;
+    color: #8a2be2;
+    cursor: pointer;
+    border-style: none;
   }
   .boutons-principaux {
     padding: 10px;
@@ -533,6 +702,40 @@
     position: relative;
     bottom: 60px;
     text-align: center;
+  }
+  @-webkit-keyframes show {
+    0% {
+      margin-top: 1000px;
+    }
+    20% {
+      margin-top: 800px;
+    }
+    40% {
+      margin-top: 400px;
+    }
+    60% {
+      margin-top: 300px;
+    }
+    100% {
+      margin-top: 0px;
+    }
+  }
+  @keyframes show {
+    0% {
+      margin-top: 1000px;
+    }
+    20% {
+      margin-top: 800px;
+    }
+    40% {
+      margin-top: 400px;
+    }
+    60% {
+      margin-top: 300px;
+    }
+    100% {
+      margin-top: 0px;
+    }
   }
 }
 /* écrans larges */
@@ -606,6 +809,7 @@
     width: 100%;
     text-align: center;
     font-weight: 900;
+    border-style: none;
   }
   #formulaire input::-moz-placeholder {
     color: black;
@@ -652,6 +856,7 @@
     font-weight: 900;
     border: 1px solid transparent;
     box-shadow: #575757;
+    font-family: "roboto", sans serif;
   }
   .menu button .fa-regular {
     position: relative;
@@ -733,6 +938,7 @@
   .div-img-pages-restau img {
     width: 70%;
   }
+  /* animation coeurs*/
   i.fas.fa-heart {
     position: relative;
     left: 50%;
@@ -746,8 +952,10 @@
     opacity: 1;
   }
   .description-menu {
-    -webkit-animation: show 3s ease forwards 4s;
-            animation: show 3s ease forwards 4s;
+    /* animation menu progressif */
+    -webkit-animation: show 3s linear forwards 2s;
+            animation: show 3s linear forwards 2s;
+    opacity: 0;
   }
   .description-menu .fa-regular.fa-heart {
     position: relative;
@@ -759,10 +967,9 @@
     border-radius: 10px;
     height: 80px;
     box-shadow: 2px 2px rgb(227, 244, 238);
-    width: 100%;
     overflow: hidden;
     /*animation menus*/
-    transition: 3s;
+    transition: 1s;
   }
   .div-description-menu i.fa-solid.fa-circle-chevron-down {
     transition: transform 1s linear;
@@ -770,14 +977,23 @@
     padding: 3%;
   }
   .div-description-menu:hover {
-    width: 90%;
+    padding-right: 10%;
     visibility: visible;
+  }
+  .div-description-menu:hover p.para-description-menu {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+  .div-description-menu:hover p.deuxieme-para {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
   }
   .div-description-menu:hover .fa-solid.fa-circle-chevron-down {
     transform: rotate(360deg);
   }
   .div-description-menu:hover .appear {
-    transform: translate(-100px);
     visibility: visible;
     transition: 3s;
   }
@@ -790,7 +1006,6 @@
     height: 80px;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
-    /*visibility: hidden;*/
   }
   .div-description-menu .appear i {
     position: relative;
@@ -805,21 +1020,45 @@
   }
   @-webkit-keyframes show {
     0% {
-      transform: scale(0);
-      opacity: 0.3;
+      margin-bottom: 1000px;
+      opacity: 1;
+    }
+    20% {
+      margin-bottom: 800px;
+      opacity: 1;
+    }
+    40% {
+      margin-bottom: 400px;
+      opacity: 1;
+    }
+    60% {
+      margin-bottom: 300px;
+      opacity: 1;
     }
     100% {
-      transform: scale(1);
+      margin-bottom: 0px;
       opacity: 1;
     }
   }
   @keyframes show {
     0% {
-      transform: scale(0);
-      opacity: 0.3;
+      margin-bottom: 1000px;
+      opacity: 1;
+    }
+    20% {
+      margin-bottom: 800px;
+      opacity: 1;
+    }
+    40% {
+      margin-bottom: 400px;
+      opacity: 1;
+    }
+    60% {
+      margin-bottom: 300px;
+      opacity: 1;
     }
     100% {
-      transform: scale(1);
+      margin-bottom: 0px;
       opacity: 1;
     }
   }

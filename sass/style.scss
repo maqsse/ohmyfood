@@ -1,12 +1,13 @@
  $nuance: 900;
-
+body{
+      font-family: 'roboto', sans-serif; 
+     
+      }
 
  /* mobiles */
 
 @media screen and (min-width: 320px) and (max-width: 767px) {
- body{
-      font-family: 'roboto', sans-serif; 
-      }
+
 
        #logo-restaurant img{
         width: 50%;
@@ -22,6 +23,7 @@
         display: flex;
         flex-direction: column;
         margin-bottom: 20%;
+        background-color: rgb(243, 243, 250);
       }
       
      #first-para{
@@ -39,7 +41,7 @@
         font-weight: $nuance;
         font-family: FontAwesome, "Roboto", sans-serif;
         border: transparent;
-        background-color: #e4d5f7;
+        background-color: #e7e9e9;
         height: 40px;
       
       &::placeholder{
@@ -49,10 +51,13 @@
     }
 .new{
 position: absolute;
-color: green;
-background-color: rgb(12, 249, 12);
+color: rgb(7, 121, 7);
+background-color: rgb(43, 214, 123);
 left: 70%;
 top: 5%;
+font-size: 5px;
+padding: 6px;
+border-radius: 2px;
 }
 
       .p-dec{
@@ -73,7 +78,7 @@ top: 5%;
         position: relative;
         bottom: 20px;
          &:hover{
-          background: #ebb8dd;
+          background: #d096c0;
           cursor: pointer;
           box-shadow: 2px 2px #8a2be2;
          }
@@ -86,6 +91,7 @@ top: 5%;
       
 
       & button{
+        background-color: rgb(243, 243, 250);
         border-radius: 20px;
         margin-bottom: 15px;
         height: 70px;
@@ -93,12 +99,13 @@ top: 5%;
         border: 1px solid transparent;
         box-shadow: #575757;
         margin-left: 2%;
+        font-family: 'roboto', sans serif;
 
         & .fa-regular{
           position: relative;
           right: 40px;
           border: 1px solid transparent;
-          padding: 4px;
+          padding: 7px;
           border-radius: 20px;
           background-color: #8a2be2;
           color: white;
@@ -168,27 +175,27 @@ margin-bottom: 20%;
       }  
       & button{
         position: relative;
-        left: 80%;
+        left: 75%;
         bottom: 50px;
         border-style: none;
         background-color: transparent;
         
       }
 
-      & i.fa-regular.fa-heart{
-        position: relative;
-        right: 30px;
-      }
-      & i.fas.fa-heart{
-        opacity: 0;
-        transition: all 2s;
+      /* animation coeurs*/
 
+            & i.fas.fa-heart{
+        opacity: 0;
+        transition: all 1s;
+        border-style: none;
+position: relative;
+left: 30px;
 
         &:hover{
           opacity:1;
           color: #8a2be2;
-           border-style: none;
-           cursor: pointer;
+          cursor: pointer;
+          border-style: none;
         }
       }
     }
@@ -258,6 +265,7 @@ hr{
   bottom: 100px;
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
+  overflow: hidden;
 
 
   & h2{
@@ -272,15 +280,17 @@ hr{
   
 
   & .div-description-menu{
-    
+     /* animation menu progressif */
+animation: show 2s linear forwards 2s;
+
     background-color: white;
     border: 1px solid transparent;
     margin-bottom: 5%;
 border-radius: 20px;
 height: 80px;
 box-shadow:2px 2px rgb(227, 244, 238);
-/*overflow: hidden;*/
 transition: all 1s;
+
 /*ANIMATION MENUS*/
 
 
@@ -313,8 +323,6 @@ visibility: visible;
     visibility: visible;
   
 }
-
-
 }
 
 & .appear{
@@ -328,31 +336,13 @@ visibility: visible;
   width: 50px;
  
   
-  /*visibility: hidden;*/
+  
   & i{
     position: relative;
     left: 25%;
     top: 25%;
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -440,6 +430,32 @@ background: rgba(255, 255, 255, 0.6);
     }
   }
 
+//keyframes apparition progressive menus//
+@keyframes show {
+    0%{
+      margin-top: 1000px ;
+      
+    }
+    
+    20%{
+      margin-top: 800px;
+      
+    }
+           
+    40%{
+      margin-top: 400px;
+    }
+    
+    60%{
+      margin-top: 300px;
+    }
+    
+    100%{
+       margin-top: 0px;
+    }
+  }
+
+
   
 }
 
@@ -449,8 +465,70 @@ background: rgba(255, 255, 255, 0.6);
 /* tablette */ 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
 
+/* loader spinner */
+
+  @keyframes hide {
+    0%{
+      transform: scale(1);
+    }
+    100%{
+      transform: scale(0);
+    }
+  }
+
+  @keyframes loaderspinner { 
+    0%{
+     margin-left: 90%;
+         }
+         100%{
+       
+     }   
+  }
+
+  .container{
+position: fixed;
+top:0;
+right: 0;
+bottom: 0;
+left: 0;
+background: white;
+z-index: 2;
+animation: hide 3s forwards 4s;
+
+    & .bar{
+width: 200px;
+height: 25px;
+border: 3px solid #eaeaea;
+margin: 100px auto;
+border-radius: 7px;
+position: relative;
+background: rgba(255, 255, 255, 0.6);
+
+& :after{
+  content: "chargement...";
+  position: absolute;
+  left: 25%;
+  top: 150%;
+  
+}
+
+& .sphere{
+  display: block;
+  width: 24px;
+  height: 100%;
+  background: #eaeaea;
+  border-radius: 50%;
+  animation: loaderspinner 3s infinite ease-in-out alternate;
+}
+    }
+  }
+
+
+
+
+
   #presentation{
-    font-size: 10px;
+    font-size: 20px;
     font-weight: $nuance;
   }
   #first-para{
@@ -480,6 +558,8 @@ background: rgba(255, 255, 255, 0.6);
     width: 100%;
     text-align: center;
     font-weight: $nuance;
+    background-color: #e7e9e9;
+    border-style: none;
   }
   input::placeholder{
   color:black;
@@ -511,6 +591,7 @@ justify-content: space-between;
         font-weight: $nuance;
         border: 1px solid transparent;
         box-shadow: #575757;
+        font-family: 'roboto', sans serif;
 
         & .fa-regular{
           position: relative;
@@ -564,7 +645,6 @@ background-color: rgb(236, 246, 246);
   bottom: 100px;
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
-
   
   & .fa-regular{
     position: relative;
@@ -595,12 +675,68 @@ margin-left: 5%;
 
 
 .div-description-menu{
+   /* animation menu progressif */
+animation: show 2s linear forwards 2s;
+
 background-color: white;
     border: 1px solid transparent;
     margin-bottom: 5%;
-border-radius: 20px;
+border-radius: 10px;
 height: 80px;
 box-shadow:2px 2px rgb(227, 244, 238);
+/* animation menus */ 
+overflow: hidden;
+transition: 1s;
+
+
+& i.fa-solid.fa-circle-chevron-down{
+  transition: transform 1s linear;
+  color: white;
+  padding: 3%;
+}
+
+&:hover{
+padding-right: 10%;
+visibility: visible;
+
+& p.para-description-menu{
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+& p.deuxieme-para{
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+& .fa-solid.fa-circle-chevron-down{
+  transform: rotate(360deg);
+  
+}
+& .appear{
+  visibility: visible;
+  transition: 3s;
+}
+
+}
+
+& .appear{
+  background-color: rgb(135, 208, 135);
+  width: 100px;
+  position: relative;
+  left: 100%;
+  bottom: 140px;
+  height: 80px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  
+  & i{
+    position: relative;
+    left: 25%;
+    top: 25%;
+  }
+}
 
 
 
@@ -611,6 +747,29 @@ box-shadow:2px 2px rgb(227, 244, 238);
     bottom: 40px;
   }
 }
+
+
+
+/* animation coeurs */
+
+
+  i.fas.fa-heart{
+        opacity: 0;
+        transition: all 1s;
+        border-style: none;
+        position: relative;
+        left: 30px;
+
+
+        &:hover{
+          opacity:1;
+          color: #8a2be2;
+          cursor: pointer;
+          border-style: none;
+        }
+      }
+
+
 
 
 .boutons-principaux{
@@ -661,6 +820,31 @@ box-shadow:2px 2px rgb(227, 244, 238);
   text-align: center;
 }
 
+//keyframes apparition progressive menus//
+@keyframes show {
+    0%{
+      margin-top: 1000px ;
+      
+    }
+    
+    20%{
+      margin-top: 800px;
+      
+    }
+           
+    40%{
+      margin-top: 400px;
+    }
+    
+    60%{
+      margin-top: 300px;
+    }
+    
+    100%{
+       margin-top: 0px;
+    }
+  }
+
 
 }
 
@@ -700,8 +884,6 @@ background: white;
 z-index: 2;
 animation: hide 3s forwards 4s;
 
-
-
     & .bar{
 width: 200px;
 height: 25px;
@@ -732,8 +914,6 @@ background: rgba(255, 255, 255, 0.6);
    
 
 
-
-
 #logo-restaurant{
 text-align: center;
 }
@@ -745,6 +925,7 @@ text-align: center;
 width: 100%;
 text-align: center;
 font-weight: $nuance;
+border-style: none;
   }
 input::placeholder{
   color:black;
@@ -793,16 +974,14 @@ input::placeholder{
       flex-direction: row;
       justify-content: space-between;
 
-      
-
-
-& button{
+      & button{
         border-radius: 20px;
         margin-bottom: 15px;
         height: 70px;
         font-weight: $nuance;
         border: 1px solid transparent;
         box-shadow: #575757;
+        font-family: 'roboto', sans serif;
 
         & .fa-regular{
           position: relative;
@@ -832,11 +1011,7 @@ input::placeholder{
         }
       }
 }
-
-
-
-
-    
+   
 
 h2{
   text-align: center;
@@ -912,6 +1087,7 @@ text-align: center;
   }
 }
 
+/* animation coeurs*/
 
 i.fas.fa-heart{
   position: relative;
@@ -927,10 +1103,13 @@ i.fas.fa-heart{
   }
 }
   
-.description-menu{
-animation: show 3s ease forwards 4s;
 
- 
+
+.description-menu{
+/* animation menu progressif */
+animation: show 3s linear forwards 2s;
+opacity: 0;
+
 
   & .fa-regular.fa-heart{
 position: relative;
@@ -941,16 +1120,15 @@ left: 10%;
 
 
 .div-description-menu{
-
+  
     border: 1px solid transparent;
     margin-bottom: 5%;
 border-radius: 10px;
 height: 80px;
 box-shadow:2px 2px rgb(227, 244, 238);
-width: 100%;
 overflow: hidden;
 /*animation menus*/
-transition: 3s;
+transition: 1s;
 
 
 & i.fa-solid.fa-circle-chevron-down{
@@ -960,15 +1138,25 @@ transition: 3s;
 }
 
 &:hover{
-width: 90%;
+padding-right: 10%;
 visibility: visible;
+
+& p.para-description-menu{
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+& p.deuxieme-para{
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
 
 & .fa-solid.fa-circle-chevron-down{
   transform: rotate(360deg);
   
 }
 & .appear{
-  transform: translate(-100px);
   visibility: visible;
   transition: 3s;
 }
@@ -984,7 +1172,7 @@ visibility: visible;
   height: 80px;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
-  /*visibility: hidden;*/
+  
   & i{
     position: relative;
     left: 25%;
@@ -1005,12 +1193,28 @@ visibility: visible;
 //keyframes apparition progressive menus//
 @keyframes show {
     0%{
-      transform: scale(0);
-      opacity: 0.3;
-    }
-    100%{
-      transform: scale(1);
+      margin-bottom: 1000px ;
       opacity: 1;
+    }
+    
+    20%{
+      margin-bottom: 800px;
+      opacity: 1;
+    }
+           
+    40%{
+      margin-bottom: 400px;
+      opacity: 1;
+    }
+    
+    60%{
+      margin-bottom: 300px;
+      opacity: 1;
+    }
+    
+    100%{
+       margin-bottom: 0px;
+       opacity: 1;
     }
   }
 
