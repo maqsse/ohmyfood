@@ -75,8 +75,7 @@ border-radius: 2px;
         box-shadow: 1px 1px 1px 1px rgb(179, 179, 189);
         width: 70%;
         margin-left: 15%;
-        position: relative;
-        bottom: 20px;
+        
          &:hover{
           background: #d096c0;
           cursor: pointer;
@@ -107,26 +106,35 @@ border-radius: 2px;
           border: 1px solid transparent;
           padding: 7px;
           border-radius: 20px;
-          background-color: #8a2be2;
+          background-color: #9f57e2;
           color: white;
+                  
 
-          & i.fa-regular.fa-2{
-            right: 50px;
-          }
+          
         }
+& i.fa-regular.fa-1{
+  position: relative;
+            right: 55px;
+          }
+
 & i.fa-regular.fa-2{
-            right: 50px;
+  position: relative;
+            right: 60px;
+          }
+          & i.fa-regular.fa-3{
+            position: relative;
+            right: 55px;
           }
 
         & .fa-list{
           position: relative;
-          right: 30px;
+          right: 25px;
           color: grey;
         }
          .fa-store{
           position: relative;
           right: 20px;
-          color:#8a2be2;
+          color: #9f57e2;
          }
 
         & .fa.fa-mobile-screen{
@@ -271,10 +279,12 @@ hr{
   & h2{
     padding-top: 5%;
     padding-left: 3%;
+    font-family: 'Shrikhand', sans serif;
+    font-size: 1.3em;
   }
 
 & .fa-regular{
-  margin-left: 10%;
+  margin-left: 15%;
 }
 
   
@@ -301,8 +311,9 @@ transition: all 1s;
 }
 
 &:hover{
-  padding-right: 20%;
+  padding-right: 24%;
 visibility: visible;
+cursor: pointer;
 
 & p.para-description-menu{
   white-space: nowrap;
@@ -317,6 +328,8 @@ visibility: visible;
 
 & .fa-solid.fa-circle-chevron-down{
   transform: rotate(360deg);
+  position: relative;
+  left: 6px;
   
 }
 & .appear{
@@ -351,9 +364,16 @@ visibility: visible;
   bottom: 20%;
   font-size: 10px;
   width: 86%;
+white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+
+
+
 }
 & .para-description-menu{
   font-weight: $nuance;
+
 }
 & .price {
   font-weight: $nuance;
@@ -543,6 +563,7 @@ background: rgba(255, 255, 255, 0.6);
 
 #image-pages-restau{
   width: 100%;
+  border-radius: 30px;
 }
 
 
@@ -624,6 +645,7 @@ justify-content: space-between;
 
  h2{
     text-align: center;
+    font-family: 'Shrikhand', sans serif;
   }
 
 
@@ -688,6 +710,9 @@ box-shadow:2px 2px rgb(227, 244, 238);
 overflow: hidden;
 transition: 1s;
 
+& p.para-description-menu{
+  font-weight: $nuance;
+}
 
 & i.fa-solid.fa-circle-chevron-down{
   transition: transform 1s linear;
@@ -745,6 +770,7 @@ visibility: visible;
     position: relative;
     left: 90%;
     bottom: 40px;
+    font-weight: $nuance;
   }
 }
 
@@ -802,7 +828,7 @@ visibility: visible;
       }
 
       & span{
-        
+        margin-left: 10px;
 
         & i.fa-solid{
           margin: 5px;
@@ -853,6 +879,11 @@ visibility: visible;
 
 
 @media screen and (min-width: 1024px)  {
+
+body{
+  margin-left: 10%;
+  margin-right: 10%;
+}
 
 /* loader spinner */
 
@@ -905,8 +936,9 @@ background: rgba(255, 255, 255, 0.6);
   display: block;
   width: 24px;
   height: 100%;
-  background: #eaeaea;
+  background: #8a2be2;
   border-radius: 50%;
+  color: #8a2be2;
   animation: loaderspinner 3s infinite ease-in-out alternate;
 }
     }
@@ -918,7 +950,9 @@ background: rgba(255, 255, 255, 0.6);
 text-align: center;
 }
 
-
+#presentation{
+  font-size: 20px;
+}
 
 #formulaire{
   & #search{
@@ -1054,6 +1088,9 @@ border-radius: 30px;
       display: flex;
       flex-direction: column;
       font-size: 10px;
+      position: absolute;
+      left: 0;
+      right: 0;
 
       & img{
         width: 40%;
@@ -1064,7 +1101,8 @@ border-radius: 30px;
       }
 
       & span{
-        
+        margin-left: 10px;
+        font-size: 20px;
 
         & i.fa-solid{
           margin: 5px;
@@ -1084,6 +1122,7 @@ border-radius: 30px;
 text-align: center;
   & img{
     width: 70%;
+    border-radius: 30px;
   }
 }
 
@@ -1110,6 +1149,9 @@ i.fas.fa-heart{
 animation: show 3s linear forwards 2s;
 opacity: 0;
 
+& p.para-description-menu{
+  font-weight: $nuance;
+}
 
   & .fa-regular.fa-heart{
 position: relative;
@@ -1187,6 +1229,7 @@ visibility: visible;
     position: relative;
     left: 90%;
     bottom: 40px;
+    font-weight: $nuance;
   }
 }
 

@@ -69,8 +69,6 @@ body {
     box-shadow: 1px 1px 1px 1px rgb(179, 179, 189);
     width: 70%;
     margin-left: 15%;
-    position: relative;
-    bottom: 20px;
   }
   .boutons-principaux:hover {
     background: #d096c0;
@@ -99,24 +97,30 @@ body {
     border: 1px solid transparent;
     padding: 7px;
     border-radius: 20px;
-    background-color: #8a2be2;
+    background-color: #9f57e2;
     color: white;
   }
-  .menu button .fa-regular i.fa-regular.fa-2 {
-    right: 50px;
+  .menu button i.fa-regular.fa-1 {
+    position: relative;
+    right: 55px;
   }
   .menu button i.fa-regular.fa-2 {
-    right: 50px;
+    position: relative;
+    right: 60px;
+  }
+  .menu button i.fa-regular.fa-3 {
+    position: relative;
+    right: 55px;
   }
   .menu button .fa-list {
     position: relative;
-    right: 30px;
+    right: 25px;
     color: grey;
   }
   .menu button .fa-store {
     position: relative;
     right: 20px;
-    color: #8a2be2;
+    color: #9f57e2;
   }
   .menu button .fa.fa-mobile-screen {
     position: relative;
@@ -233,9 +237,11 @@ body {
   .description-menu h2 {
     padding-top: 5%;
     padding-left: 3%;
+    font-family: "Shrikhand", sans serif;
+    font-size: 1.3em;
   }
   .description-menu .fa-regular {
-    margin-left: 10%;
+    margin-left: 15%;
   }
   .description-menu .div-description-menu {
     /* animation menu progressif */
@@ -255,8 +261,9 @@ body {
     color: white;
   }
   .description-menu .div-description-menu:hover {
-    padding-right: 20%;
+    padding-right: 24%;
     visibility: visible;
+    cursor: pointer;
   }
   .description-menu .div-description-menu:hover p.para-description-menu {
     white-space: nowrap;
@@ -270,6 +277,8 @@ body {
   }
   .description-menu .div-description-menu:hover .fa-solid.fa-circle-chevron-down {
     transform: rotate(360deg);
+    position: relative;
+    left: 6px;
   }
   .description-menu .div-description-menu:hover .appear {
     visibility: visible;
@@ -294,6 +303,9 @@ body {
     bottom: 20%;
     font-size: 10px;
     width: 86%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
   }
   .description-menu .div-description-menu .para-description-menu {
     font-weight: 900;
@@ -484,6 +496,7 @@ body {
   }
   #image-pages-restau {
     width: 100%;
+    border-radius: 30px;
   }
   #logo-restaurant {
     position: relative;
@@ -555,6 +568,7 @@ body {
   }
   h2 {
     text-align: center;
+    font-family: "Shrikhand", sans serif;
   }
   .box-image img {
     height: 500px;
@@ -606,6 +620,9 @@ body {
     overflow: hidden;
     transition: 1s;
   }
+  .div-description-menu p.para-description-menu {
+    font-weight: 900;
+  }
   .div-description-menu i.fa-solid.fa-circle-chevron-down {
     transition: transform 1s linear;
     color: white;
@@ -652,6 +669,7 @@ body {
     position: relative;
     left: 90%;
     bottom: 40px;
+    font-weight: 900;
   }
   /* animation coeurs */
   i.fas.fa-heart {
@@ -690,6 +708,9 @@ body {
     margin-bottom: 20px;
     margin-left: 10px;
     margin-top: 10px;
+  }
+  #foot span {
+    margin-left: 10px;
   }
   #foot span i.fa-solid {
     margin: 5px;
@@ -740,6 +761,10 @@ body {
 }
 /* écrans larges */
 @media screen and (min-width: 1024px) {
+  body {
+    margin-left: 10%;
+    margin-right: 10%;
+  }
   /* loader spinner */
   @-webkit-keyframes hide {
     0% {
@@ -797,13 +822,17 @@ body {
     display: block;
     width: 24px;
     height: 100%;
-    background: #eaeaea;
+    background: #8a2be2;
     border-radius: 50%;
+    color: #8a2be2;
     -webkit-animation: loaderspinner 3s infinite ease-in-out alternate;
             animation: loaderspinner 3s infinite ease-in-out alternate;
   }
   #logo-restaurant {
     text-align: center;
+  }
+  #presentation {
+    font-size: 20px;
   }
   #formulaire #search {
     width: 100%;
@@ -916,6 +945,9 @@ body {
     display: flex;
     flex-direction: column;
     font-size: 10px;
+    position: absolute;
+    left: 0;
+    right: 0;
   }
   #foot img {
     width: 40%;
@@ -923,6 +955,10 @@ body {
     margin-bottom: 20px;
     margin-left: 10px;
     margin-top: 10px;
+  }
+  #foot span {
+    margin-left: 10px;
+    font-size: 20px;
   }
   #foot span i.fa-solid {
     margin: 5px;
@@ -937,6 +973,7 @@ body {
   }
   .div-img-pages-restau img {
     width: 70%;
+    border-radius: 30px;
   }
   /* animation coeurs*/
   i.fas.fa-heart {
@@ -956,6 +993,9 @@ body {
     -webkit-animation: show 3s linear forwards 2s;
             animation: show 3s linear forwards 2s;
     opacity: 0;
+  }
+  .description-menu p.para-description-menu {
+    font-weight: 900;
   }
   .description-menu .fa-regular.fa-heart {
     position: relative;
@@ -1017,6 +1057,7 @@ body {
     position: relative;
     left: 90%;
     bottom: 40px;
+    font-weight: 900;
   }
   @-webkit-keyframes show {
     0% {
