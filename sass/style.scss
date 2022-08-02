@@ -39,20 +39,22 @@ body{
         width: 100%;
         text-align: center;
         font-weight: $nuance;
-        font-family: FontAwesome, "Roboto", sans-serif;
+        font-family: FontAwesome , "Roboto", sans-serif ;
         border: transparent;
         background-color: #e7e9e9;
         height: 40px;
+        
       
       &::placeholder{
         color: black;
+        
       }
 
     }
 .new{
 position: absolute;
-color: rgb(7, 121, 7);
-background-color: rgb(43, 214, 123);
+color: rgb(18, 93, 18);
+background-color: rgb(143, 237, 187);
 left: 70%;
 top: 5%;
 font-size: 5px;
@@ -61,10 +63,11 @@ border-radius: 2px;
 }
 
       .p-dec{
-        font-size: 15px;
+        font-size: 16px;
         margin-left: 25px;
         position: relative;
         bottom: 20px;
+       text-align-last: center;
       }
       .boutons-principaux{
         padding: 10px;
@@ -87,12 +90,66 @@ border-radius: 2px;
       display: flex;
       flex-direction: column;
       margin-bottom: 20%;
-      
+
+      & i.fa-regular.fa-1{
+  position: relative;
+  top: 70px;
+   border: 1px solid transparent;
+          padding: 5px;
+          border-radius: 20px;
+          background-color: #9f57e2;
+          color: white;
+          width: 10px;
+          }
+& i.fa-regular.fa-2{
+  position: relative;
+            top: 70px;
+            border: 1px solid transparent;
+          padding: 5px;
+          border-radius: 20px;
+          background-color: #9f57e2;
+          color: white;
+          width: 10px;
+          }
+& i.fa-regular.fa-3{
+            position: relative;
+            top: 70px;
+            border: 1px solid transparent;
+          padding: 5px;
+          border-radius: 20px;
+          background-color: #9f57e2;
+          color: white;
+          width: 10px;
+          }
+          & .fa.fa-mobile-screen{
+            width: 15px;
+          position: relative;
+          top: 45px;
+          left: 40px;
+          color: grey;
+        }
+        & .fa-list{
+          width: 15px;
+          position: relative;
+          top: 45px;
+          left: 40px;
+          color: grey;
+        }
+         & .fa-store{
+          width: 15px;
+          position: relative;
+          top: 45px;
+          left: 40px;
+          color: #9f57e2;
+          
+         }
+
+
 
       & button{
         background-color: rgb(243, 243, 250);
         border-radius: 20px;
-        margin-bottom: 15px;
+        font-size: 16px;
         height: 70px;
         font-weight: $nuance;
         border: 1px solid transparent;
@@ -100,48 +157,10 @@ border-radius: 2px;
         margin-left: 2%;
         font-family: 'roboto', sans serif;
 
-        & .fa-regular{
-          position: relative;
-          right: 40px;
-          border: 1px solid transparent;
-          padding: 7px;
-          border-radius: 20px;
-          background-color: #9f57e2;
-          color: white;
-                  
+        
+               
 
-          
-        }
-& i.fa-regular.fa-1{
-  position: relative;
-            right: 55px;
-          }
-
-& i.fa-regular.fa-2{
-  position: relative;
-            right: 60px;
-          }
-          & i.fa-regular.fa-3{
-            position: relative;
-            right: 55px;
-          }
-
-        & .fa-list{
-          position: relative;
-          right: 25px;
-          color: grey;
-        }
-         .fa-store{
-          position: relative;
-          right: 20px;
-          color: #9f57e2;
-         }
-
-        & .fa.fa-mobile-screen{
-          position: relative;
-          right: 20px;
-          color: grey;
-        }
+        
       }
     }
 
@@ -228,6 +247,9 @@ left: 30px;
         & i.fa-solid{
           margin: 5px;
         }
+        & i#utensils-footrestau{
+          margin: 7px;
+        }
         
         
       }
@@ -285,6 +307,10 @@ hr{
 
 & .fa-regular{
   margin-left: 15%;
+}
+
+& #fa-heart-alafr{
+margin-left: 30%;
 }
 
   
@@ -446,6 +472,7 @@ background: rgba(255, 255, 255, 0.6);
   background: #eaeaea;
   border-radius: 50%;
   animation: loaderspinner 3s infinite ease-in-out alternate;
+  background: #8a2be2;
 }
     }
   }
@@ -536,8 +563,9 @@ background: rgba(255, 255, 255, 0.6);
   display: block;
   width: 24px;
   height: 100%;
-  background: #eaeaea;
+  
   border-radius: 50%;
+  background: #8a2be2;
   animation: loaderspinner 3s infinite ease-in-out alternate;
 }
     }
@@ -580,7 +608,9 @@ background: rgba(255, 255, 255, 0.6);
     text-align: center;
     font-weight: $nuance;
     background-color: #e7e9e9;
-    border-style: none;
+    border: 1px solid transparent;
+    font-family: FontAwesome , "Roboto", sans-serif ;
+    height: 40px;
   }
   input::placeholder{
   color:black;
@@ -603,7 +633,32 @@ background: rgba(255, 255, 255, 0.6);
 display: flex;
 flex-direction: row;
 justify-content: space-between;
+& .fa-regular{
+          position: relative;
+          top: 20px;
+          right: 5px;
+          border: 1px solid transparent;
+          padding: 5px;
+          border-radius: 20px;
+          
+        }
+& .fa-list{
+          position: relative;
+          top: 25px;
+          color: #8a2be2;
+        }
+        & .fa-store{
+          position: relative;
+          top: 25px;
+          color:#8a2be2;
+         }
 
+        & .fa.fa-mobile-screen{
+          position: relative;
+          top: 25px;
+          color: grey;
+          color: #8a2be2;
+        }
 
 & button{
         border-radius: 20px;
@@ -613,33 +668,10 @@ justify-content: space-between;
         border: 1px solid transparent;
         box-shadow: #575757;
         font-family: 'roboto', sans serif;
+        font-size: 18px;
 
-        & .fa-regular{
-          position: relative;
-          right: 15px;
-          border: 1px solid transparent;
-          padding: 5px;
-          border-radius: 20px;
-          
-        }
-        & .fa-list{
-          position: relative;
-          right: 10px;
-          color: grey;
-          color: #8a2be2;
-        }
-         .fa-store{
-          position: relative;
-          right: 10px;
-          color:#8a2be2;
-         }
-
-        & .fa.fa-mobile-screen{
-          position: relative;
-          right: 10px;
-          color: grey;
-          color: #8a2be2;
-        }
+        
+        
       }
 }
 
@@ -833,6 +865,9 @@ visibility: visible;
         & i.fa-solid{
           margin: 5px;
         }
+        & i#utensils-footrestau{
+          margin: 7px;
+        }
       }
 
       & a{
@@ -955,19 +990,24 @@ text-align: center;
 }
 
 #formulaire{
+
+  
   & #search{
 width: 100%;
 text-align: center;
 font-weight: $nuance;
-border-style: none;
+background-color: beige;
+border: 1px solid transparent;
+font-family: "FontAwesome", "Roboto", sans-serif ;
+height: 40px;
+
   }
 input::placeholder{
-  color:black;
-}
-  
+  color:#8a2be2;
+   
 }
 
-
+}
 
 #first-para{
   font-size: 40px;
@@ -989,8 +1029,8 @@ input::placeholder{
         border: 1px solid transparent;
         box-shadow: 1px 1px 1px 1px rgb(179, 179, 189);
         position: relative;
-        left: 40%;
-        width: 20%;
+        left: 35%;
+        width: 30%;
         transition: background 4s;
 
 
@@ -1007,19 +1047,12 @@ input::placeholder{
       display: flex;
       flex-direction: row;
       justify-content: space-between;
+      background: #fae9f5;
+      border-radius: 20px;
 
-      & button{
-        border-radius: 20px;
-        margin-bottom: 15px;
-        height: 70px;
-        font-weight: $nuance;
-        border: 1px solid transparent;
-        box-shadow: #575757;
-        font-family: 'roboto', sans serif;
-
-        & .fa-regular{
+& .fa-regular{
           position: relative;
-          right: 15px;
+          top: 20px;
           border: 1px solid transparent;
           padding: 5px;
           border-radius: 20px;
@@ -1027,22 +1060,33 @@ input::placeholder{
         }
         & .fa-list{
           position: relative;
-          right: 10px;
-          color: grey;
+         top: 25px;
           color: #8a2be2;
         }
-         .fa-store{
+        & .fa-store{
           position: relative;
-          right: 10px;
+          top: 25px;
           color:#8a2be2;
          }
 
         & .fa.fa-mobile-screen{
           position: relative;
-          right: 10px;
-          color: grey;
+          top: 25px;
           color: #8a2be2;
         }
+
+
+      & button{
+        border-radius: 20px;
+        margin-bottom: 15px;
+        height: 70px;
+        font-weight: $nuance;
+        border: 1px solid transparent;
+        background-color: transparent;
+        font-family: 'roboto', sans serif;
+        font-size: 18px;
+
+        
       }
 }
    
@@ -1091,6 +1135,7 @@ border-radius: 30px;
       position: absolute;
       left: 0;
       right: 0;
+      margin-top: 10%;
 
       & img{
         width: 40%;
