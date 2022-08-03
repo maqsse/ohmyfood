@@ -50,7 +50,6 @@ body {
     background-color: rgb(143, 237, 187);
     left: 70%;
     top: 5%;
-    font-size: 5px;
     padding: 6px;
     border-radius: 2px;
   }
@@ -59,8 +58,8 @@ body {
     margin-left: 25px;
     position: relative;
     bottom: 20px;
+    text-align-last: center;
     -moz-text-align-last: center;
-         text-align-last: center;
   }
   .boutons-principaux {
     padding: 10px;
@@ -71,11 +70,12 @@ body {
     box-shadow: 1px 1px 1px 1px rgb(179, 179, 189);
     width: 70%;
     margin-left: 15%;
+    /* effet survol boutons principaux */
   }
   .boutons-principaux:hover {
-    background: #d096c0;
+    background: #e170c3;
+    box-shadow: 2px 2px #785a95;
     cursor: pointer;
-    box-shadow: 2px 2px #8a2be2;
   }
   .menu {
     display: flex;
@@ -198,7 +198,6 @@ body {
     color: white;
     display: flex;
     flex-direction: column;
-    font-size: 10px;
   }
   #foot img {
     width: 40%;
@@ -274,17 +273,17 @@ body {
     border: 1px solid transparent;
     margin-bottom: 5%;
     border-radius: 20px;
-    height: 80px;
+    height: 70px;
     box-shadow: 2px 2px rgb(227, 244, 238);
     transition: all 1s;
-    /*ANIMATION MENUS*/
+    /*ANIMATION MENUS TIROIR*/
   }
   .description-menu .div-description-menu i.fa-solid.fa-circle-chevron-down {
     transition: transform 1s linear;
     color: white;
   }
   .description-menu .div-description-menu:hover {
-    padding-right: 24%;
+    padding-right: 30%;
     visibility: visible;
     cursor: pointer;
   }
@@ -301,7 +300,6 @@ body {
   .description-menu .div-description-menu:hover .fa-solid.fa-circle-chevron-down {
     transform: rotate(360deg);
     position: relative;
-    left: 6px;
   }
   .description-menu .div-description-menu:hover .appear {
     visibility: visible;
@@ -310,21 +308,20 @@ body {
     background-color: rgb(135, 208, 135);
     position: relative;
     left: 110%;
-    bottom: 133px;
-    height: 100%;
+    bottom: 140px;
+    height: 75px;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
-    width: 50px;
+    width: 32%;
   }
   .description-menu .div-description-menu .appear i {
     position: relative;
-    left: 25%;
+    left: 20%;
     top: 25%;
   }
   .description-menu .div-description-menu .deuxieme-para {
     position: relative;
     bottom: 20%;
-    font-size: 10px;
     width: 86%;
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -521,6 +518,7 @@ body {
   #image-pages-restau {
     width: 100%;
     border-radius: 30px;
+    height: 500px;
   }
   #logo-restaurant {
     position: relative;
@@ -621,6 +619,7 @@ body {
   .box-image img {
     width: 100%;
     border-radius: 30px;
+    height: 300px;
   }
   .box-image button {
     position: relative;
@@ -654,6 +653,7 @@ body {
     transition: transform 1s linear;
     color: white;
     padding: 3%;
+    font-size: 40px;
   }
   .div-description-menu:hover {
     padding-right: 10%;
@@ -682,14 +682,14 @@ body {
     position: relative;
     left: 100%;
     bottom: 140px;
-    height: 80px;
+    height: 100px;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
   }
   .div-description-menu .appear i {
     position: relative;
-    left: 25%;
-    top: 25%;
+    left: 15%;
+    top: 20%;
   }
   .div-description-menu .price {
     width: 10%;
@@ -721,13 +721,18 @@ body {
     box-shadow: 1px 1px 1px 1px rgb(179, 179, 189);
     margin-left: 10%;
     margin-right: 10%;
+    /* effet survol boutons principaux */
+  }
+  .boutons-principaux:hover {
+    background: #e170c3;
+    box-shadow: 2px 2px #785a95;
+    cursor: pointer;
   }
   #foot {
     background-color: #575757;
     color: white;
     display: flex;
     flex-direction: column;
-    font-size: 10px;
   }
   #foot img {
     width: 40%;
@@ -858,6 +863,9 @@ body {
     -webkit-animation: loaderspinner 3s infinite ease-in-out alternate;
             animation: loaderspinner 3s infinite ease-in-out alternate;
   }
+  #accueil_presentation {
+    margin-bottom: 10%;
+  }
   #logo-restaurant {
     text-align: center;
   }
@@ -882,6 +890,9 @@ body {
   #formulaire input::placeholder {
     color: #8a2be2;
   }
+  .explore {
+    margin-bottom: 10%;
+  }
   #first-para {
     font-size: 40px;
     text-align: center;
@@ -900,11 +911,12 @@ body {
     position: relative;
     left: 35%;
     width: 30%;
-    transition: background 4s;
+    /* effet sur boutons principaux au survol */
   }
   .boutons-principaux:hover {
-    background: #e396ce;
-    box-shadow: 2px 2px #8a2be2;
+    background: #e170c3;
+    box-shadow: 2px 2px #785a95;
+    cursor: pointer;
   }
   .menu {
     display: flex;
@@ -912,6 +924,7 @@ body {
     justify-content: space-between;
     background: #fae9f5;
     border-radius: 20px;
+    margin-bottom: 10%;
   }
   .menu .fa-regular {
     position: relative;
@@ -1009,6 +1022,7 @@ body {
   .div-img-pages-restau img {
     width: 70%;
     border-radius: 30px;
+    height: 500px;
   }
   /* animation coeurs*/
   i.fas.fa-heart {
@@ -1043,7 +1057,7 @@ body {
     height: 80px;
     box-shadow: 2px 2px rgb(227, 244, 238);
     overflow: hidden;
-    /*animation menus*/
+    /*animation menus tiroir*/
     transition: 1s;
   }
   .div-description-menu i.fa-solid.fa-circle-chevron-down {
@@ -1074,18 +1088,19 @@ body {
   }
   .div-description-menu .appear {
     background-color: rgb(135, 208, 135);
-    width: 100px;
+    width: 130px;
     position: relative;
     left: 100%;
     bottom: 140px;
-    height: 80px;
+    height: 130%;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
   }
   .div-description-menu .appear i {
     position: relative;
     left: 25%;
-    top: 25%;
+    top: 15%;
+    font-size: 50px;
   }
   .div-description-menu .price {
     width: 10%;
