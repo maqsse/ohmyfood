@@ -1,0 +1,110 @@
+/* mobiles */ 
+@media screen and (min-width: 320px) and (max-width: 767px)
+{
+#logo-restaurant img
+	{
+		width: 50%;
+		margin-left: 25%;
+		font-family: "Shrikhand", sans serif;
+	}
+
+	#presentation
+	{
+		display: none;
+	}
+
+	
+
+	#search
+	{
+		width: 100%;
+		text-align: center;
+		font-weight: $nuance;
+		font-family: FontAwesome , "Roboto", sans-serif ;
+		border: transparent;
+		background-color: #e7e9e9;
+		height: 40px;
+
+		&::placeholder
+		{
+			color:black;
+		}
+	}
+}
+
+/* tablettes */
+@media screen and (min-width: 768px) and (max-width: 1023px)
+{
+#presentation
+	{
+		font-size: 20px;
+		font-weight: $nuance;
+	}
+#logo-restaurant
+	{
+		position: relative;
+		left: 25%;
+		width: 70%;
+	}
+
+
+#formulaire
+	{
+		& #search
+		{
+			width: 100%;
+			text-align: center;
+			font-weight: $nuance;
+			background-color: #e7e9e9;
+			border: 1px solid transparent;
+			font-family: FontAwesome , "Roboto", sans-serif ;
+			height: 40px;
+		}
+
+		input::placeholder
+		{
+			color:black;
+		}
+
+	}
+
+}
+
+/* écrans larges */
+@media screen and (min-width: 1024px)
+{
+
+	#accueil_presentation
+	{
+		margin-bottom: 10%;
+	}
+
+	#logo-restaurant
+	{
+		text-align: center;
+	}
+
+	#presentation
+	{
+		font-size: 20px;
+	}
+
+	#formulaire
+	{
+		& #search
+		{
+			width: 100%;
+			text-align: center;
+			font-weight: $nuance;
+			background-color: beige;
+			border: 1px solid transparent;
+			font-family: "FontAwesome", "Roboto", sans-serif ;
+			height: 40px;
+		}
+
+		input::placeholder
+		{
+			color:#8a2be2;
+		}
+	}
+}

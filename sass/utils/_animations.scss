@@ -1,0 +1,303 @@
+/* mobiles */ 
+@media screen and (min-width: 320px) and (max-width: 767px)
+{
+
+	/* loader spinner*/
+	@keyframes hide
+	{
+		0%
+		{
+			transform: scale(1);
+		}
+
+		100%
+		{
+			transform: scale(0);
+		}
+
+	}
+
+	@keyframes loaderspinner
+	{
+		0%
+		{
+			margin-left: 90%;
+		}
+
+	}
+
+	.container
+	{
+		position: fixed;
+		top:0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		background: white;
+		z-index: 2;
+		animation: hide 3s forwards 4s;
+		& .bar
+		{
+			width: 200px;
+			height: 25px;
+			border: 3px solid #eaeaea;
+			margin: 100px auto;
+			border-radius: 7px;
+			position: relative;
+			background: rgba(255, 255, 255, 0.6);
+			& :after
+			{
+				content: "chargement...";
+				position: absolute;
+				left: 25%;
+				top: 150%;
+			}
+
+			& .sphere
+			{
+				display: block;
+				width: 24px;
+				height: 100%;
+				background: #eaeaea;
+				border-radius: 50%;
+				animation: loaderspinner 3s infinite ease-in-out alternate;
+				background: #8a2be2;
+			}
+		}
+
+	}
+
+	//keyframes apparition progressive menus//
+  @keyframes show
+	{
+		0%
+		{
+			margin-top: 1000px ;
+		}
+
+		20%
+		{
+			margin-top: 800px;
+		}
+
+		40%
+		{
+			margin-top: 400px;
+		}
+
+		60%
+		{
+			margin-top: 300px;
+		}
+
+		100%
+		{
+			margin-top: 0px;
+		}
+
+	}
+
+}
+
+/* tablettes */ 
+@media screen and (min-width: 768px) and (max-width: 1023px)
+{
+/* loader spinner */
+	@keyframes hide
+	{
+		0%
+		{
+			transform: scale(1);
+		}
+
+		100%
+		{
+			transform: scale(0);
+		}
+
+	}
+
+	@keyframes loaderspinner
+	{
+		0%
+		{
+			margin-left: 90%;
+		}
+
+	}
+
+	.container
+	{
+		position: fixed;
+		top:0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		background: white;
+		z-index: 2;
+		animation: hide 3s forwards 4s;
+		& .bar
+		{
+			width: 200px;
+			height: 25px;
+			border: 3px solid #eaeaea;
+			margin: 100px auto;
+			border-radius: 7px;
+			position: relative;
+			background: rgba(255, 255, 255, 0.6);
+			& :after
+			{
+				content: "chargement...";
+				position: absolute;
+				left: 25%;
+				top: 150%;
+			}
+
+			& .sphere
+			{
+				display: block;
+				width: 24px;
+				height: 100%;
+				border-radius: 50%;
+				background: #8a2be2;
+				animation: loaderspinner 3s infinite ease-in-out alternate;
+			}
+		}
+
+	}
+
+    //keyframes apparition progressive menus//
+  @keyframes show
+	{
+		0%
+		{
+			margin-top: 1000px ;
+		}
+
+		20%
+		{
+			margin-top: 800px;
+		}
+
+		40%
+		{
+			margin-top: 400px;
+		}
+
+		60%
+		{
+			margin-top: 300px;
+		}
+
+		100%
+		{
+			margin-top: 0px;
+		}
+
+	}
+}
+
+/* écrans larges */
+@media screen and (min-width: 1024px)
+{
+/* loader spinner */
+	@keyframes hide
+	{
+		0%
+		{
+			transform: scale(1);
+		}
+
+		100%
+		{
+			transform: scale(0);
+		}
+
+	}
+
+	@keyframes loaderspinner
+	{
+		0%
+		{
+			margin-left: 90%;
+		}
+		
+	}
+
+	.container
+	{
+		position: fixed;
+		top:0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		background: white;
+		z-index: 2;
+		animation: hide 3s forwards 4s;
+		& .bar
+		{
+			width: 200px;
+			height: 25px;
+			border: 3px solid #eaeaea;
+			margin: 100px auto;
+			border-radius: 7px;
+			position: relative;
+			background: rgba(255, 255, 255, 0.6);
+			& :after
+			{
+				content: "chargement...";
+				position: absolute;
+				left: 25%;
+				top: 150%;
+			}
+
+			& .sphere
+			{
+				display: block;
+				width: 24px;
+				height: 100%;
+				background: #8a2be2;
+				border-radius: 50%;
+				color: #8a2be2;
+				animation: loaderspinner 3s infinite ease-in-out alternate;
+			}
+		}
+
+	}
+//keyframes apparition progressive menus//
+  @keyframes show
+	{
+		0%
+		{
+			margin-bottom: 1000px ;
+			opacity: 1;
+		}
+
+		20%
+		{
+			margin-bottom: 800px;
+			opacity: 1;
+		}
+
+		40%
+		{
+			margin-bottom: 400px;
+			opacity: 1;
+		}
+
+		60%
+		{
+			margin-bottom: 300px;
+			opacity: 1;
+		}
+
+		100%
+		{
+			margin-bottom: 0px;
+			opacity: 1;
+		}
+
+	}
+
+
+}

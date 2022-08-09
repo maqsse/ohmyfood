@@ -1,0 +1,72 @@
+/* mobiles */ 
+@media screen and (min-width: 320px) and (max-width: 767px)
+{
+.boutons-principaux
+	{
+		padding: 10px;
+		border-radius: 20px;
+		color: white;
+		background: linear-gradient(#FF79DA, #9356DC);
+		border: 1px solid transparent;
+		box-shadow: 1px 1px 1px 1px rgb(179, 179, 189);
+		width: 70%;
+		margin-left: 15%;
+		/* effet survol boutons principaux */
+
+		&:hover
+		{
+			background: #e170c3;
+			box-shadow: 2px 2px #785a95;
+			cursor: pointer;
+		}
+	}
+}
+
+/* tablettes */ 
+@media screen and (min-width: 768px) and (max-width: 1023px)
+{
+.boutons-principaux
+	{
+		padding: 10px;
+		border-radius: 20px;
+		color: white;
+		background-color: rgb(177, 122, 205);
+		border: 1px solid transparent;
+		box-shadow: 1px 1px 1px 1px rgb(179, 179, 189);
+		margin-left: 10%;
+		margin-right: 10%;
+		/* effet survol boutons principaux */
+		&:hover
+		{
+			background: #e170c3;
+			box-shadow: 2px 2px #785a95;
+			cursor: pointer;
+		}
+	}
+}
+
+/* écrans larges */
+@media screen and (min-width: 1024px)
+{
+.boutons-principaux
+	{
+		padding: 10px;
+		border-radius: 20px;
+		color: white;
+		background: linear-gradient(#FF79DA, #9356DC);
+		border: 1px solid transparent;
+		box-shadow: 1px 1px 1px 1px rgb(179, 179, 189);
+		position: relative;
+		left: 35%;
+		width: 30%;
+		font-size: 20px;
+		/* effet sur boutons principaux au survol */
+		&:hover
+		{
+			background: #e170c3;
+			box-shadow: 2px 2px #785a95;
+			cursor: pointer;
+		}
+	}
+
+}

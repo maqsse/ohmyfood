@@ -1,8 +1,7 @@
 @charset "UTF-8";
-body {
+ body {
   font-family: "roboto", sans-serif;
 }
-
 /* mobiles */
 @media screen and (min-width: 320px) and (max-width: 767px) {
   #logo-restaurant img {
@@ -58,8 +57,8 @@ body {
     margin-left: 25px;
     position: relative;
     bottom: 20px;
-    text-align-last: center;
     -moz-text-align-last: center;
+         text-align-last: center;
   }
   .boutons-principaux {
     padding: 10px;
@@ -140,7 +139,7 @@ body {
     height: 70px;
     font-weight: 900;
     border: 1px solid transparent;
-    box-shadow: #575757;
+    box-shadow: 1px 1px grey;
     margin-left: 2%;
     font-family: "roboto", sans serif;
   }
@@ -182,10 +181,10 @@ body {
   }
   #bloc-photos-restau i.fas.fa-heart {
     opacity: 0;
-    transition: all 1s;
+    transition: all 0.5s;
     border-style: none;
     position: relative;
-    left: 30px;
+    left: 50%;
   }
   #bloc-photos-restau i.fas.fa-heart:hover {
     opacity: 1;
@@ -276,6 +275,7 @@ body {
     height: 70px;
     box-shadow: 2px 2px rgb(227, 244, 238);
     transition: all 1s;
+    overflow: hidden;
     /*ANIMATION MENUS TIROIR*/
   }
   .description-menu .div-description-menu i.fa-solid.fa-circle-chevron-down {
@@ -309,10 +309,10 @@ body {
     position: relative;
     left: 110%;
     bottom: 140px;
-    height: 75px;
+    height: 130%;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
-    width: 32%;
+    width: 33%;
   }
   .description-menu .div-description-menu .appear i {
     position: relative;
@@ -587,7 +587,7 @@ body {
     height: 70px;
     font-weight: 900;
     border: 1px solid transparent;
-    box-shadow: #575757;
+    box-shadow: 1px 1px grey;
     font-family: "roboto", sans serif;
     font-size: 18px;
   }
@@ -644,7 +644,7 @@ body {
     box-shadow: 2px 2px rgb(227, 244, 238);
     /* animation menus */
     overflow: hidden;
-    transition: 1s;
+    transition: 0.2s;
   }
   .div-description-menu p.para-description-menu {
     font-weight: 900;
@@ -671,18 +671,19 @@ body {
   }
   .div-description-menu:hover .fa-solid.fa-circle-chevron-down {
     transform: rotate(360deg);
+    position: relative;
   }
   .div-description-menu:hover .appear {
     visibility: visible;
-    transition: 3s;
+    transition: 0.2s;
   }
   .div-description-menu .appear {
     background-color: rgb(135, 208, 135);
-    width: 100px;
+    width: 75px;
     position: relative;
     left: 100%;
     bottom: 140px;
-    height: 100px;
+    height: 130%;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
   }
@@ -701,10 +702,10 @@ body {
   /* animation coeurs */
   i.fas.fa-heart {
     opacity: 0;
-    transition: all 1s;
+    transition: all 0.5s;
     border-style: none;
     position: relative;
-    left: 30px;
+    left: 50%;
   }
   i.fas.fa-heart:hover {
     opacity: 1;
@@ -911,6 +912,7 @@ body {
     position: relative;
     left: 35%;
     width: 30%;
+    font-size: 20px;
     /* effet sur boutons principaux au survol */
   }
   .boutons-principaux:hover {
@@ -1028,7 +1030,7 @@ body {
   i.fas.fa-heart {
     position: relative;
     left: 50%;
-    transition: all 2s;
+    transition: all 0.5s;
     opacity: 0;
     border-style: none;
   }
@@ -1051,6 +1053,8 @@ body {
     left: 10%;
   }
   .div-description-menu {
+    -webkit-animation: show 2s linear forwards 2s;
+            animation: show 2s linear forwards 2s;
     border: 1px solid transparent;
     margin-bottom: 5%;
     border-radius: 10px;
@@ -1098,7 +1102,7 @@ body {
   }
   .div-description-menu .appear i {
     position: relative;
-    left: 25%;
+    left: 15%;
     top: 15%;
     font-size: 50px;
   }

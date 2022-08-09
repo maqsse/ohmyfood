@@ -1,0 +1,25 @@
+body
+{
+	font-family: 'roboto', sans-serif;
+	
+}
+/* écrans mobiles */
+@media screen and (min-width: 320px) and (max-width: 767px) 
+{
+body
+{
+	margin-right: 3%;
+	margin-left: 3%;
+}
+}
+
+
+/* écrans larges */ 
+@media screen and (min-width: 1024px)
+{
+body
+	{
+		margin-left: 10%;
+		margin-right: 10%;
+	}
+}
