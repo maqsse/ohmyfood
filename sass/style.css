@@ -308,7 +308,7 @@
     background-color: rgb(135, 208, 135);
     position: relative;
     left: 110%;
-    bottom: 140px;
+    bottom: 8rem;
     height: 130%;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
@@ -682,7 +682,7 @@
     width: 75px;
     position: relative;
     left: 100%;
-    bottom: 140px;
+    bottom: 8rem;
     height: 130%;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
@@ -1095,7 +1095,7 @@
     width: 130px;
     position: relative;
     left: 100%;
-    bottom: 140px;
+    bottom: 8rem;
     height: 130%;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
