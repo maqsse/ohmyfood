@@ -36,10 +36,9 @@
 	.p-dec
 	{
 		font-size: 16px;
-		margin-left: 25px;
 		position: relative;
 		bottom: 20px;
-        text-align-last: center;
+        text-align: center;
 	}
 
 	
@@ -289,6 +288,9 @@
 			text-decoration: none;
 			color: black;
 		}
+	}
+	.new{
+		display: none;
 	}
 
     /* animation coeurs */

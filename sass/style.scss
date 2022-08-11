@@ -1,10 +1,14 @@
-@import "sass/layout/_footer.scss";
-@import "sass/layout/_header.scss";
-@import "sass/utils/_variables.scss";
-@import "sass/utils/_mixins.scss";
-@import "sass/base/_typography.scss";
-@import "sass/components/_buttons.scss";
-@import "sass/utils/_animations.scss";
-@import "sass/pages/_accueil.scss";
-@import "sass/pages/_restaus.scss";
+@import "utils/variables";
+@import "utils/mixins";
+@import "utils/animations";
+
+@import "base/typography";
+
+@import "layout/footer";
+@import "layout/header";
+
+@import "components/buttons";
+
+@import "pages/accueil";
+@import "pages/restaus";
 
